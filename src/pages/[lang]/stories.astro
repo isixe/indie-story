@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PostListWithToggle from '../../components/PostListWithToggle';
+import { getPostsByCategory } from '../../utils/posts';
+import { t, type Lang } from '../../i18n';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'zh' } },
+    { params: { lang: 'en' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Lang };
+const storyPosts = getPostsByCategory('story');
+---
+
+<Layout
+  lang={lang}
+  title={t(lang, 'storiesTitle')}
+  description={t(lang, 'storiesDescription')}
+>
+  <div class="mb-6">
+    <p class="font-serif text-[var(--color-text-muted)] text-sm leading-relaxed">
+      {t(lang, 'storiesIntro')}
+    </p>
+  </div>
+  
+  <PostListWithToggle
+    client:load
+    posts={storyPosts}
+    title={t(lang, 'allStories')}
+    lang={lang}
+  />
+</Layout>

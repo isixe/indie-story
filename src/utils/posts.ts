@@ -823,13 +823,13 @@ export function getPostsByCategoryAndPage(
 }
 
 // 获取最后更新时间
-export function getLastUpdateTime(): string {
+export function getLastUpdateTime(locale: string = 'zh-CN'): string {
   const allPosts = getAllPosts();
   if (allPosts.length === 0) return '';
   
   const latestPost = allPosts[0];
   const date = latestPost.updateDate || latestPost.publishDate;
-  return date.toLocaleString('zh-CN', {
+  return date.toLocaleString(locale, {
     year: 'numeric',
     month: '2-digit',
     day: '2-digit',
@@ -839,8 +839,8 @@ export function getLastUpdateTime(): string {
 }
 
 // 格式化日期
-export function formatDate(date: Date): string {
-  return date.toLocaleDateString('zh-CN', {
+export function formatDate(date: Date, locale: string = 'zh-CN'): string {
+  return date.toLocaleDateString(locale, {
     year: 'numeric',
     month: '2-digit',
     day: '2-digit'
@@ -848,8 +848,8 @@ export function formatDate(date: Date): string {
 }
 
 // 格式化时间（带时分）
-export function formatDateTime(date: Date): string {
-  return date.toLocaleString('zh-CN', {
+export function formatDateTime(date: Date, locale: string = 'zh-CN'): string {
+  return date.toLocaleString(locale, {
     year: 'numeric',
     month: '2-digit',
     day: '2-digit',

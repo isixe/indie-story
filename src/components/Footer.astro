@@ -1,5 +1,12 @@
 ---
+import { t, getLangFromPath, type Lang } from '../i18n';
+
+interface Props {
+  lang?: Lang;
+}
+
 const currentYear = new Date().getFullYear();
+const lang = Astro.props.lang || getLangFromPath(Astro.url.pathname);
 ---
 
 <footer style="margin-top: var(--space-3xl); padding-top: var(--space-xl);">
@@ -8,7 +15,7 @@ const currentYear = new Date().getFullYear();
       Indie Story
     </p>
     <p class="font-sans text-xs text-[var(--color-text-light)]">
-      Build for independent developers · {currentYear}
+      {t(lang, 'footer')} · {currentYear}
     </p>
   </div>
 </footer>

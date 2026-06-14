@@ -1,0 +1,57 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import PostListWithToggle from '../../../components/PostListWithToggle';
+import Pagination from '../../../components/Pagination.astro';
+import { getPostsByCategoryAndPage, getPostsByCategory } from '../../../utils/posts';
+import { t, type Lang } from '../../../i18n';
+
+export function getStaticPaths() {
+  const pageSize = 20;
+  const storyPosts = getPostsByCategory('story');
+  const totalPages = Math.ceil(storyPosts.length / pageSize);
+  
+  const paths: { params: { lang: string; page: string } }[] = [];
+  for (const lang of ['zh', 'en'] as const) {
+    for (let page = 2; page <= totalPages; page++) {
+      paths.push({ params: { lang, page: page.toString() } });
+    }
+  }
+  return paths;
+}
+
+const { lang, page } = Astro.params as { lang: Lang; page: string };
+const currentPage = parseInt(page || '1', 10);
+
+const storyPosts = getPostsByCategory('story');
+const pageSize = 20;
+const totalPages = Math.ceil(storyPosts.length / pageSize);
+
+const { posts } = getPostsByCategoryAndPage('story', currentPage, 20);
+
+if (currentPage > totalPages || currentPage < 2) {
+  return Astro.redirect(`/${lang}/`);
+}
+---
+
+<Layout 
+  lang={lang}
+  title={t(lang, 'storiesPage', { page: currentPage })}
+  description={t(lang, 'storiesPage', { page: currentPage })}
+>
+  <PostListWithToggle 
+    client:load
+    posts={posts} 
+    title={t(lang, 'allStories')}
+    showPageInfo={true}
+    currentPage={currentPage}
+    totalPages={totalPages}
+    lang={lang}
+  />
+  
+  <Pagination 
+    currentPage={currentPage} 
+    totalPages={totalPages}
+    baseUrl={`/${lang}/`}
+    lang={lang}
+  />
+</Layout>

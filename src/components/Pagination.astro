@@ -1,11 +1,15 @@
 ---
+import { t, getLangFromPath, type Lang } from '../i18n';
+
 interface Props {
   currentPage: number;
   totalPages: number;
   baseUrl?: string;
+  lang?: Lang;
 }
 
 const { currentPage, totalPages, baseUrl = '/' } = Astro.props;
+const lang = Astro.props.lang || getLangFromPath(Astro.url.pathname);
 
 const getPageUrl = (page: number) => {
   if (page === 1) return baseUrl;
@@ -20,16 +24,16 @@ const getPageUrl = (page: number) => {
         href={getPageUrl(currentPage - 1)}
         class="font-sans text-xs tracking-[0.1em] px-4 py-2 text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-all duration-200"
       >
-        PREV
+        {t(lang, 'pagination.prev')}
       </a>
     ) : (
       <span class="font-sans text-xs tracking-[0.1em] px-4 py-2 text-[var(--color-text-light)] cursor-not-allowed">
-        PREV
+        {t(lang, 'pagination.prev')}
       </span>
     )}
     
     <span class="font-sans text-xs text-[var(--color-text-muted)]">
-      Page {currentPage} / {totalPages}
+      {t(lang, 'pagination.page', { current: currentPage, total: totalPages })}
     </span>
     
     {currentPage < totalPages ? (
@@ -37,11 +41,11 @@ const getPageUrl = (page: number) => {
         href={getPageUrl(currentPage + 1)}
         class="font-sans text-xs tracking-[0.1em] px-4 py-2 text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-all duration-200"
       >
-        NEXT
+        {t(lang, 'pagination.next')}
       </a>
     ) : (
       <span class="font-sans text-xs tracking-[0.1em] px-4 py-2 text-[var(--color-text-light)] cursor-not-allowed">
-        NEXT
+        {t(lang, 'pagination.next')}
       </span>
     )}
   </div>

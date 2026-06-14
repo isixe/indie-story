@@ -1,13 +1,17 @@
 ---
+import { getLangFromPath, type Lang } from '../i18n';
 import { formatDateTime } from '../utils/posts';
 import type { Post } from '../utils/posts';
 
 interface Props {
   post: Post;
+  lang?: Lang;
 }
 
 const { post } = Astro.props;
-const dateStr = formatDateTime(post.publishDate);
+const lang = Astro.props.lang || getLangFromPath(Astro.url.pathname);
+const locale = lang === 'zh' ? 'zh-CN' : 'en-US';
+const dateStr = formatDateTime(post.publishDate, locale);
 ---
 
 <article class="group" style="padding: var(--space-md) 0;">

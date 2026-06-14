@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PostListWithToggle from '../../components/PostListWithToggle';
+import Pagination from '../../components/Pagination.astro';
+import { getPostsByCategory } from '../../utils/posts';
+import { t, type Lang } from '../../i18n';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'zh' } },
+    { params: { lang: 'en' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Lang };
+const storyPosts = getPostsByCategory('story');
+const pageSize = 20;
+const totalPages = Math.ceil(storyPosts.length / pageSize);
+const currentPage = 1;
+const posts = storyPosts.slice(0, pageSize);
+---
+
+<Layout
+  lang={lang}
+  title={t(lang, 'homeTitle')}
+  description={t(lang, 'homeDescription')}
+>
+  <PostListWithToggle
+    client:load
+    posts={posts}
+    title={t(lang, 'latestStories')}
+    showPageInfo={totalPages > 1}
+    currentPage={currentPage}
+    totalPages={totalPages}
+    lang={lang}
+  />
+  
+  <Pagination
+    currentPage={currentPage}
+    totalPages={totalPages}
+    baseUrl={`/${lang}/`}
+    lang={lang}
+  />
+</Layout>

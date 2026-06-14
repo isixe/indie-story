@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { LayoutGrid, List } from 'lucide-react';
+import { t, type Lang } from '../i18n';
 import type { Post } from '../utils/posts';
 
 interface PostListWithToggleProps {
@@ -8,12 +9,13 @@ interface PostListWithToggleProps {
   showPageInfo?: boolean;
   currentPage?: number;
   totalPages?: number;
+  lang?: Lang;
 }
 
-function PostItem({ post }: { post: Post }) {
+function PostItem({ post, locale }: { post: Post; locale: string }) {
   const [hovered, setHovered] = useState(false);
   const formatDateTime = (date: Date) => {
-    return date.toLocaleString('zh-CN', {
+    return date.toLocaleString(locale, {
       year: 'numeric',
       month: '2-digit',
       day: '2-digit',
@@ -65,14 +67,15 @@ export default function PostListWithToggle({
   title = 'Latest Updates',
   showPageInfo = false,
   currentPage = 1,
-  totalPages = 1
+  totalPages = 1,
+  lang = 'zh'
 }: PostListWithToggleProps) {
   const [isTwoColumn, setIsTwoColumn] = useState(true);
   const [mounted, setMounted] = useState(false);
+  const locale = lang === 'zh' ? 'zh-CN' : 'en-US';
 
   useEffect(() => {
     setMounted(true);
-    // 从 localStorage 读取用户偏好
     const saved = localStorage.getItem('postListLayout');
     if (saved !== null) {
       setIsTwoColumn(saved === 'two');
@@ -95,7 +98,7 @@ export default function PostListWithToggle({
           <div className="flex items-center gap-3">
             {showPageInfo && (
               <span className="font-sans text-xs text-[var(--color-text-light)]">
-                Page {currentPage} / {totalPages}
+                {t(lang, 'page', { current: currentPage, total: totalPages })}
               </span>
             )}
           </div>
@@ -103,12 +106,12 @@ export default function PostListWithToggle({
         <div className="lg:grid lg:grid-cols-2 lg:gap-x-12">
           <div>
             {posts.filter((_, i) => i % 2 === 0).map((post) => (
-              <PostItem key={post.slug} post={post} />
+              <PostItem key={post.slug} post={post} locale={locale} />
             ))}
           </div>
           <div>
             {posts.filter((_, i) => i % 2 === 1).map((post) => (
-              <PostItem key={post.slug} post={post} />
+              <PostItem key={post.slug} post={post} locale={locale} />
             ))}
           </div>
         </div>
@@ -125,7 +128,7 @@ export default function PostListWithToggle({
         <div className="flex items-center gap-3">
           {showPageInfo && (
             <span className="font-sans text-xs text-[var(--color-text-light)]">
-              Page {currentPage} / {totalPages}
+              {t(lang, 'page', { current: currentPage, total: totalPages })}
             </span>
           )}
           <div className="flex items-center gap-1 rounded" style={{backgroundColor: 'var(--color-surface-subtle)'}}>
@@ -136,7 +139,7 @@ export default function PostListWithToggle({
                   ? 'bg-[var(--color-text)] text-[var(--color-bg)]'
                   : 'text-[var(--color-text-muted)] hover:text-[var(--color-hover)]'
               }`}
-              title="双列视图"
+              title={t(lang, 'gridView')}
             >
               <LayoutGrid size={14} />
             </button>
@@ -147,7 +150,7 @@ export default function PostListWithToggle({
                   ? 'bg-[var(--color-text)] text-[var(--color-bg)]'
                   : 'text-[var(--color-text-muted)] hover:text-[var(--color-hover)]'
               }`}
-              title="单列视图"
+              title={t(lang, 'listView')}
             >
               <List size={14} />
             </button>
@@ -159,19 +162,19 @@ export default function PostListWithToggle({
         <div className="lg:grid lg:grid-cols-2 lg:gap-x-12">
           <div>
             {posts.filter((_, i) => i % 2 === 0).map((post) => (
-              <PostItem key={post.slug} post={post} />
+              <PostItem key={post.slug} post={post} locale={locale} />
             ))}
           </div>
           <div>
             {posts.filter((_, i) => i % 2 === 1).map((post) => (
-              <PostItem key={post.slug} post={post} />
+              <PostItem key={post.slug} post={post} locale={locale} />
             ))}
           </div>
         </div>
       ) : (
         <div className="w-full">
           {posts.map((post) => (
-            <PostItem key={post.slug} post={post} />
+            <PostItem key={post.slug} post={post} locale={locale} />
           ))}
         </div>
       )}

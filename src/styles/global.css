@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@import "@chinese-fonts/lxgwwenkai/dist/LXGWWenKai-Regular/result.css";
+@import "@chinese-fonts/lxgwwenkai/dist/LXGWWenKai-Medium/result.css";
+@import "@chinese-fonts/lxgwwenkai/dist/LXGWWenKai-Light/result.css";
+
 /* CSS Variables */
 :root {
   --color-bg: #FAF9F6;
@@ -46,7 +50,7 @@
 }
 
 html {
-	font-family: "Noto Serif SC", "Source Han Serif CN", "Songti SC", serif;
+	font-family: "LXGW WenKai", "Noto Serif SC", "Source Han Serif CN", "Songti SC", serif;
 	background-color: var(--color-bg);
 	color: var(--color-text);
 	line-height: 1.7;
@@ -65,22 +69,22 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Playfair Display", "Noto Serif SC", serif;
+	font-family: "Playfair Display", "LXGW WenKai", "Noto Serif SC", serif;
 	font-weight: 600;
 	line-height: 1.3;
 	margin: 0;
 }
 
 .font-display {
-	font-family: "Playfair Display", "Noto Serif SC", serif;
+	font-family: "Playfair Display", "LXGW WenKai", "Noto Serif SC", serif;
 }
 
 .font-sans {
-	font-family: "Inter", "Noto Sans SC", sans-serif;
+	font-family: "LXGW WenKai", "Inter", "Noto Sans SC", sans-serif;
 }
 
 .font-serif {
-	font-family: "Noto Serif SC", "Source Han Serif CN", serif;
+	font-family: "LXGW WenKai", "Noto Serif SC", "Source Han Serif CN", serif;
 }
 
 /* Links */

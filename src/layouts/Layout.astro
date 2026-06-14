@@ -1,0 +1,103 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  showUpdateTime?: boolean;
+}
+
+const { 
+  title = 'Indie Story - 独立开发者故事', 
+  description = '收集和分享独立开发者的真实故事，以及实用的独立开发指南',
+  showUpdateTime = true
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#FAF9F6" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-[var(--color-bg)]">
+    <div class="mx-auto animate-fade-in-up ink-wash-context" style="max-width: var(--content-max-width); padding: var(--space-xl) var(--content-padding);">
+      <Header currentPath={currentPath} />
+      <main>
+        <slot />
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  /* 水墨点击涟漪效果 */
+  .ink-wash-context {
+    position: relative;
+  }
+
+  .ink-ripple {
+    position: fixed;
+    pointer-events: none;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(58, 90, 58, 0.3) 0%, rgba(58, 90, 58, 0.08) 40%, transparent 70%);
+    transform: translate(-50%, -50%) scale(0);
+    animation: inkExpand 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    z-index: 9999;
+  }
+
+  @keyframes inkExpand {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 0.3;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ink-ripple {
+      display: none;
+    }
+  }
+</style>
+
+<script is:inline>
+  (function() {
+    const MAX_RIPPLE_SIZE = 120;
+    const MIN_RIPPLE_SIZE = 40;
+
+    function createRipple(e) {
+      const ripple = document.createElement('div');
+      ripple.className = 'ink-ripple';
+      const size = Math.max(MIN_RIPPLE_SIZE, Math.min(MAX_RIPPLE_SIZE, Math.min(window.innerWidth, window.innerHeight) * 0.15));
+      ripple.style.width = size + 'px';
+      ripple.style.height = size + 'px';
+      ripple.style.left = e.clientX + 'px';
+      ripple.style.top = e.clientY + 'px';
+      document.body.appendChild(ripple);
+      ripple.addEventListener('animationend', () => {
+        ripple.remove();
+      });
+    }
+
+    document.addEventListener('click', createRipple, { passive: true });
+  })();
+</script>

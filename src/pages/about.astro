@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="关于 - Indie Story"
+  description="关于 Indie Story 站点"
+  showUpdateTime={false}
+>
+  <article class="max-w-2xl">
+    <!-- 标题区 -->
+    <header class="mb-10 pb-6 border-b border-[var(--color-border)]">
+      <h1 class="font-display text-3xl sm:text-4xl mb-3 text-[var(--color-text)] tracking-tight">
+        关于 Indie Story
+      </h1>
+      <p class="font-sans text-sm text-[var(--color-text-muted)] tracking-wide">
+        记录独立开发者的故事与旅程
+      </p>
+    </header>
+
+    <!-- 简介 -->
+    <section class="mb-10">
+      <p class="font-serif text-lg text-[var(--color-text)] leading-relaxed">
+        Indie Story 是一个专注于独立开发者故事的博客存档站点。我们相信，
+        每一个独立开发者都有一段值得被记录的故事。
+      </p>
+    </section>
+
+    <!-- 内容分类 -->
+    <section class="mb-10">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="h-px flex-1 bg-[var(--color-border)]"></div>
+        <h2 class="font-serif text-sm text-[var(--color-text-muted)]">
+          在这个站点，你可以读到
+        </h2>
+        <div class="h-px flex-1 bg-[var(--color-border)]"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div class="flex items-start gap-3 p-3 rounded bg-[rgba(0,0,0,0.02)]">
+          <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-text-muted)] mt-2 flex-shrink-0"></span>
+          <span class="font-serif text-[var(--color-text)]">独立开发者的真实经历和心路历程</span>
+        </div>
+        <div class="flex items-start gap-3 p-3 rounded bg-[rgba(0,0,0,0.02)]">
+          <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-text-muted)] mt-2 flex-shrink-0"></span>
+          <span class="font-serif text-[var(--color-text)]">从0到1的产品开发故事</span>
+        </div>
+        <div class="flex items-start gap-3 p-3 rounded bg-[rgba(0,0,0,0.02)]">
+          <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-text-muted)] mt-2 flex-shrink-0"></span>
+          <span class="font-serif text-[var(--color-text)]">收入公开和财务透明的案例</span>
+        </div>
+        <div class="flex items-start gap-3 p-3 rounded bg-[rgba(0,0,0,0.02)]">
+          <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-text-muted)] mt-2 flex-shrink-0"></span>
+          <span class="font-serif text-[var(--color-text)]">失败教训和成功经验</span>
+        </div>
+        <div class="flex items-start gap-3 p-3 rounded bg-[rgba(0,0,0,0.02)] sm:col-span-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-text-muted)] mt-2 flex-shrink-0"></span>
+          <span class="font-serif text-[var(--color-text)]">实用的独立开发指南和教程</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 使命 -->
+    <section class="mb-10">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="h-px flex-1 bg-[var(--color-border)]"></div>
+        <h2 class="font-serif text-sm text-[var(--color-text-muted)]">
+          我们的使命
+        </h2>
+        <div class="h-px flex-1 bg-[var(--color-border)]"></div>
+      </div>
+
+      <div class="p-5 border-l-2 border-[var(--color-text)] bg-[rgba(0,0,0,0.015)]">
+        <p class="font-serif text-[var(--color-text)] leading-relaxed">
+          独立开发是一条孤独但充满希望的道路。我们希望通过收集和分享这些故事，
+          让更多人对独立开发有真实的了解，给正在路上的开发者以启发和鼓励。
+        </p>
+      </div>
+    </section>
+
+    <!-- 引用 -->
+    <footer class="pt-6 border-t border-[var(--color-border)]">
+      <blockquote class="text-center">
+        <p class="font-display text-lg text-[var(--color-text-muted)] italic">
+          "The best time to start was yesterday. The second best time is now."
+        </p>
+      </blockquote>
+    </footer>
+  </article>
+</Layout>

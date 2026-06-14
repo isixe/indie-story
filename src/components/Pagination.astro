@@ -1,0 +1,48 @@
+---
+interface Props {
+  currentPage: number;
+  totalPages: number;
+  baseUrl?: string;
+}
+
+const { currentPage, totalPages, baseUrl = '/' } = Astro.props;
+
+const getPageUrl = (page: number) => {
+  if (page === 1) return baseUrl;
+  return `${baseUrl}page/${page}`;
+};
+---
+
+{totalPages > 1 && (
+  <div class="flex items-center justify-center gap-4 mt-8">
+    {currentPage > 1 ? (
+      <a
+        href={getPageUrl(currentPage - 1)}
+        class="font-sans text-xs tracking-[0.1em] px-4 py-2 text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-all duration-200"
+      >
+        PREV
+      </a>
+    ) : (
+      <span class="font-sans text-xs tracking-[0.1em] px-4 py-2 text-[var(--color-text-light)] cursor-not-allowed">
+        PREV
+      </span>
+    )}
+    
+    <span class="font-sans text-xs text-[var(--color-text-muted)]">
+      Page {currentPage} / {totalPages}
+    </span>
+    
+    {currentPage < totalPages ? (
+      <a
+        href={getPageUrl(currentPage + 1)}
+        class="font-sans text-xs tracking-[0.1em] px-4 py-2 text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-all duration-200"
+      >
+        NEXT
+      </a>
+    ) : (
+      <span class="font-sans text-xs tracking-[0.1em] px-4 py-2 text-[var(--color-text-light)] cursor-not-allowed">
+        NEXT
+      </span>
+    )}
+  </div>
+)}

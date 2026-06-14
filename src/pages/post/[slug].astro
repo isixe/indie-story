@@ -1,0 +1,86 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getPostBySlug, getAllPosts, formatDateTime } from '../../utils/posts';
+import { ArrowLeft } from 'lucide-react';
+
+export function getStaticPaths() {
+  const posts = getAllPosts();
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const post = getPostBySlug(slug);
+
+if (!post) {
+  return Astro.redirect('/404');
+}
+
+const dateStr = formatDateTime(post.publishDate);
+---
+
+<Layout 
+  title={`${post.title} - Indie Story`}
+  description={post.description || post.title}
+  showUpdateTime={false}
+>
+  <article class="mx-auto" style="max-width: 672px;">
+    {/* 返回按钮 */}
+    <a 
+      href="/" 
+      class="inline-flex items-center gap-2 font-sans text-xs text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-colors group"
+      style="margin-bottom: var(--space-2xl);"
+    >
+      <ArrowLeft size={14} class="group-hover:-translate-x-1 transition-transform" />
+      返回列表
+    </a>
+    
+    {/* 文章头部 */}
+    <header style="margin-bottom: var(--space-2xl); padding-bottom: var(--space-2xl);">
+      <p class="font-sans text-xs text-[var(--color-text-light)] uppercase tracking-wide" style="margin-bottom: var(--space-sm);">
+        {post.blogName}
+      </p>
+      <h1 class="font-display text-2xl sm:text-3xl font-semibold text-[var(--color-text)] leading-tight" style="margin-bottom: var(--space-lg);">
+        {post.title}
+      </h1>
+      <div class="flex flex-wrap items-center gap-4 font-sans text-xs text-[var(--color-text-muted)]">
+        <time>{dateStr}</time>
+        {post.category === 'story' ? (
+          <span class="px-2 py-1 text-[var(--color-text-muted)]" style="background-color: var(--color-surface-subtle);">故事</span>
+        ) : (
+          <span class="px-2 py-1 text-[var(--color-text-muted)]" style="background-color: var(--color-surface-subtle);">指南</span>
+        )}
+      </div>
+      {post.tags && post.tags.length > 0 && (
+        <div class="flex flex-wrap gap-2" style="margin-top: var(--space-md);">
+          {post.tags.map((tag) => (
+            <span class="font-sans text-xs text-[var(--color-text-light)]">
+              #{tag}
+            </span>
+          ))}
+        </div>
+      )}
+    </header>
+    
+    {/* 文章内容 */}
+    <div class="article-content text-[var(--color-text)]">
+      {post.content ? (
+        <div set:html={post.content.replace(/\n/g, '<br/>').replace(/## (.*)/g, '<h2>$1</h2>').replace(/### (.*)/g, '<h3>$1</h3>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/- (.*)/g, '<li>$1</li>')} />
+      ) : (
+        <p class="text-[var(--color-text-muted)] italic">文章内容加载中...</p>
+      )}
+    </div>
+    
+    {/* 文章底部 */}
+    <footer style="margin-top: var(--space-3xl); padding-top: var(--space-2xl);">
+      <a 
+        href="/" 
+        class="inline-flex items-center gap-2 font-sans text-sm text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-colors group"
+      >
+        <ArrowLeft size={16} class="group-hover:-translate-x-1 transition-transform" />
+        返回文章列表
+      </a>
+    </footer>
+  </article>
+</Layout>

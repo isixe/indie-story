@@ -1,0 +1,51 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PostListWithToggle from '../../components/PostListWithToggle';
+import Pagination from '../../components/Pagination.astro';
+import { getPostsByCategoryAndPage, getPostsByCategory } from '../../utils/posts';
+
+export function getStaticPaths() {
+  const pageSize = 20;
+  // 获取故事分类的文章数量
+  const storyPosts = getPostsByCategory('story');
+  const totalPages = Math.ceil(storyPosts.length / pageSize);
+  
+  // 生成第2页及以后的页面路径（第1页是首页）
+  const paths = [];
+  for (let page = 2; page <= totalPages; page++) {
+    paths.push({ params: { page: page.toString() } });
+  }
+  return paths;
+}
+
+const { page } = Astro.params;
+const currentPage = parseInt(page || '1', 10);
+
+// 获取故事分类的文章
+const { posts, totalPages } = getPostsByCategoryAndPage('story', currentPage, 20);
+
+// 如果页面超出范围，返回404
+if (currentPage > totalPages || currentPage < 2) {
+  return Astro.redirect('/');
+}
+---
+
+<Layout 
+  title={`独立开发者故事 - 第${currentPage}页 - Indie Story`}
+  description="收集和分享独立开发者的真实故事，记录独立开发的点点滴滴"
+>
+  <PostListWithToggle 
+    client:load
+    posts={posts} 
+    title="Latest Stories"
+    showPageInfo={true}
+    currentPage={currentPage}
+    totalPages={totalPages}
+  />
+  
+  <Pagination 
+    currentPage={currentPage} 
+    totalPages={totalPages}
+    baseUrl="/"
+  />
+</Layout>

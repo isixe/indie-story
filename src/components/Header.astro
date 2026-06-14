@@ -1,0 +1,57 @@
+---
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '/' } = Astro.props;
+
+const navItems = [
+  { href: '/', label: '首页' },
+  { href: '/stories', label: '故事' },
+  { href: '/guides', label: '指南' },
+  { href: '/about', label: '关于' },
+];
+
+const isActive = (href: string) => {
+  if (href === '/') {
+    return currentPath === '/';
+  }
+  return currentPath.startsWith(href);
+};
+---
+
+<header class="w-full" style="padding-bottom: var(--space-lg); margin-bottom: var(--space-2xl);">
+  <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between" style="gap: var(--space-md);">
+    <div>
+      <p class="font-sans text-xs tracking-[0.2em] text-[var(--color-text-muted)] uppercase" style="margin-bottom: var(--space-xs);">
+        Independent Developer Stories
+      </p>
+      <h1 class="font-display text-4xl sm:text-5xl font-semibold tracking-tight text-[var(--color-text)] leading-none">
+        <a href="/">Indie Story</a>
+      </h1>
+    </div>
+    <nav>
+      <ul class="flex flex-wrap gap-6 sm:gap-8">
+        {navItems.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class={`font-sans text-sm tracking-wide transition-all duration-200 relative group ${
+                isActive(item.href)
+                  ? 'text-[var(--color-hover)] font-medium'
+                  : 'text-[var(--color-text-muted)] hover:text-[var(--color-hover)]'
+              }`}
+            >
+              {item.label}
+              <span 
+                class={`absolute -bottom-1 left-0 h-[1px] bg-[var(--color-hover)] transition-all duration-200 ${
+                  isActive(item.href) ? 'w-full' : 'w-0 group-hover:w-full'
+                }`}
+              />
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>

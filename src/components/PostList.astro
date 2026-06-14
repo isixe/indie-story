@@ -1,0 +1,46 @@
+---
+import PostItem from './PostItem.astro';
+import type { Post } from '../utils/posts';
+
+interface Props {
+  posts: Post[];
+  title?: string;
+  showPageInfo?: boolean;
+  currentPage?: number;
+  totalPages?: number;
+}
+
+const { 
+  posts, 
+  title = 'Latest Updates', 
+  showPageInfo = false,
+  currentPage = 1,
+  totalPages = 1
+} = Astro.props;
+---
+
+<section class="w-full">
+  <div class="flex items-center justify-between" style="margin-bottom: var(--space-md);">
+    <h2 class="font-sans text-xs tracking-[0.2em] text-[var(--color-text-muted)] uppercase">
+      {title}
+    </h2>
+    {showPageInfo && (
+      <span class="font-sans text-xs text-[var(--color-text-light)]">
+        Page {currentPage} / {totalPages}
+      </span>
+    )}
+  </div>
+  
+  <div class="lg:grid lg:grid-cols-2 lg:gap-x-12" style="--divider-color: var(--color-border);">
+    <div>
+      {posts.filter((_, i) => i % 2 === 0).map((post) => (
+        <PostItem post={post} />
+      ))}
+    </div>
+    <div>
+      {posts.filter((_, i) => i % 2 === 1).map((post) => (
+        <PostItem post={post} />
+      ))}
+    </div>
+  </div>
+</section>

@@ -19,6 +19,7 @@ export const zh = {
 
   // Footer
   footer: '为独立开发者而生',
+  rss: 'RSS 订阅',
 
   // Home page
   homeTitle: 'Indie Story - 独立开发者故事',

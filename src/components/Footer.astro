@@ -14,8 +14,18 @@ const lang = Astro.props.lang || getLangFromPath(Astro.url.pathname);
     <p class="font-sans text-xs text-[var(--color-text-muted)]">
       Indie Story
     </p>
-    <p class="font-sans text-xs text-[var(--color-text-light)]">
-      {t(lang, 'footer')} · {currentYear}
-    </p>
+    <div class="flex items-center gap-4">
+      <a
+        href={lang === 'en' ? '/en/rss.xml' : '/rss.xml'}
+        class="font-sans text-xs text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-colors"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {t(lang, 'rss')}
+      </a>
+      <span class="font-sans text-xs text-[var(--color-text-light)]">
+        {t(lang, 'footer')} · {currentYear}
+      </span>
+    </div>
   </div>
 </footer>

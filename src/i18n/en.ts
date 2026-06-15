@@ -19,6 +19,7 @@ export const en = {
 
   // Footer
   footer: 'Build for independent developers',
+  rss: 'RSS Feed',
 
   // Home page
   homeTitle: 'Indie Story - Independent Developer Stories',

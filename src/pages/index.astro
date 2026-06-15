@@ -1,3 +1,37 @@
 ---
-return Astro.redirect('/zh/', 301);
+import Layout from '../layouts/Layout.astro';
+import PostListWithToggle from '../components/PostListWithToggle';
+import Pagination from '../components/Pagination.astro';
+import { getPostsByCategory } from '../utils/posts';
+import { t } from '../i18n';
+
+const lang = 'zh';
+const storyPosts = getPostsByCategory('story', lang);
+const pageSize = 20;
+const totalPages = Math.ceil(storyPosts.length / pageSize);
+const currentPage = 1;
+const posts = storyPosts.slice(0, pageSize);
 ---
+
+<Layout
+  lang={lang}
+  title={t(lang, 'homeTitle')}
+  description={t(lang, 'homeDescription')}
+>
+  <PostListWithToggle
+    client:load
+    posts={posts}
+    title={t(lang, 'latestStories')}
+    showPageInfo={totalPages > 1}
+    currentPage={currentPage}
+    totalPages={totalPages}
+    lang={lang}
+  />
+  
+  <Pagination
+    currentPage={currentPage}
+    totalPages={totalPages}
+    baseUrl={`/${lang}/`}
+    lang={lang}
+  />
+</Layout>

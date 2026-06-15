@@ -1,6 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import { getPostBySlug, getPostsByLang, formatDateTime } from '../../../utils/posts';
+import { getPostBySlug, getPostsByLang, formatDateTime, renderMarkdown } from '../../../utils/posts';
 import { ArrowLeft } from 'lucide-react';
 import { t, type Lang } from '../../../i18n';
 
@@ -23,6 +23,7 @@ if (!post) {
 }
 
 const dateStr = formatDateTime(post.publishDate, lang === 'en' ? 'en-US' : 'zh-CN');
+const renderedContent = post.content ? renderMarkdown(post.content) : '';
 ---
 
 <Layout 
@@ -71,8 +72,8 @@ const dateStr = formatDateTime(post.publishDate, lang === 'en' ? 'en-US' : 'zh-C
     
     {/* Post content */}
     <div class="article-content text-[var(--color-text)]">
-      {post.content ? (
-        <div set:html={post.content.replace(/\n/g, '<br/>').replace(/## (.*)/g, '<h2>$1</h2>').replace(/### (.*)/g, '<h3>$1</h3>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/- (.*)/g, '<li>$1</li>')} />
+      {renderedContent ? (
+        <div set:html={renderedContent} />
       ) : (
         <p class="text-[var(--color-text-muted)] italic">{t(lang, 'contentLoading')}</p>
       )}

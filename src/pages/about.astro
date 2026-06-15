@@ -1,3 +1,85 @@
 ---
-return Astro.redirect('/zh/about', 301);
+import Layout from '../layouts/Layout.astro';
+import { t } from '../i18n';
 ---
+
+<Layout
+  lang="zh"
+  title={t('zh', 'aboutTitle')}
+  description={t('zh', 'aboutDescription')}
+  showUpdateTime={false}
+>
+  <article class="max-w-2xl">
+    <header class="mb-10 pb-6 border-b border-[var(--color-border)]">
+      <h1 class="font-display text-3xl sm:text-4xl mb-3 text-[var(--color-text)] tracking-tight">
+        {t('zh', 'aboutHeading')}
+      </h1>
+      <p class="font-sans text-sm text-[var(--color-text-muted)] tracking-wide">
+        {t('zh', 'aboutSubtitle')}
+      </p>
+    </header>
+
+    <section class="mb-10">
+      <p class="font-serif text-lg text-[var(--color-text)] leading-relaxed">
+        {t('zh', 'aboutIntro')}
+      </p>
+    </section>
+
+    <section class="mb-10">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="h-px flex-1 bg-[var(--color-border)]"></div>
+        <h2 class="font-serif text-sm text-[var(--color-text-muted)]">
+          {t('zh', 'aboutWhatYouCanRead')}
+        </h2>
+        <div class="h-px flex-1 bg-[var(--color-border)]"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div class="flex items-start gap-3 p-3 rounded bg-[rgba(0,0,0,0.02)]">
+          <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-text-muted)] mt-2 flex-shrink-0"></span>
+          <span class="font-serif text-[var(--color-text)]">{t('zh', 'aboutItem1')}</span>
+        </div>
+        <div class="flex items-start gap-3 p-3 rounded bg-[rgba(0,0,0,0.02)]">
+          <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-text-muted)] mt-2 flex-shrink-0"></span>
+          <span class="font-serif text-[var(--color-text)]">{t('zh', 'aboutItem2')}</span>
+        </div>
+        <div class="flex items-start gap-3 p-3 rounded bg-[rgba(0,0,0,0.02)]">
+          <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-text-muted)] mt-2 flex-shrink-0"></span>
+          <span class="font-serif text-[var(--color-text)]">{t('zh', 'aboutItem3')}</span>
+        </div>
+        <div class="flex items-start gap-3 p-3 rounded bg-[rgba(0,0,0,0.02)]">
+          <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-text-muted)] mt-2 flex-shrink-0"></span>
+          <span class="font-serif text-[var(--color-text)]">{t('zh', 'aboutItem4')}</span>
+        </div>
+        <div class="flex items-start gap-3 p-3 rounded bg-[rgba(0,0,0,0.02)] sm:col-span-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-text-muted)] mt-2 flex-shrink-0"></span>
+          <span class="font-serif text-[var(--color-text)]">{t('zh', 'aboutItem5')}</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="h-px flex-1 bg-[var(--color-border)]"></div>
+        <h2 class="font-serif text-sm text-[var(--color-text-muted)]">
+          {t('zh', 'aboutMission')}
+        </h2>
+        <div class="h-px flex-1 bg-[var(--color-border)]"></div>
+      </div>
+
+      <div class="p-5 border-l-2 border-[var(--color-text)] bg-[rgba(0,0,0,0.015)]">
+        <p class="font-serif text-[var(--color-text)] leading-relaxed">
+          {t('zh', 'aboutMissionText')}
+        </p>
+      </div>
+    </section>
+
+    <footer class="pt-6 border-t border-[var(--color-border)]">
+      <blockquote class="text-center">
+        <p class="font-display text-lg text-[var(--color-text-muted)] italic">
+          {t('zh', 'aboutQuote')}
+        </p>
+      </blockquote>
+    </footer>
+  </article>
+</Layout>

@@ -1,3 +1,27 @@
 ---
-return Astro.redirect('/zh/guides', 301);
+import Layout from '../layouts/Layout.astro';
+import PostListWithToggle from '../components/PostListWithToggle';
+import { getPostsByCategory } from '../utils/posts';
+import { t } from '../i18n';
+
+const guidePosts = getPostsByCategory('guide', 'zh');
 ---
+
+<Layout
+  lang="zh"
+  title={t('zh', 'guidesTitle')}
+  description={t('zh', 'guidesDescription')}
+>
+  <div class="mb-6">
+    <p class="font-serif text-[var(--color-text-muted)] text-sm leading-relaxed">
+      {t('zh', 'guidesIntro')}
+    </p>
+  </div>
+  
+  <PostListWithToggle
+    client:load
+    posts={guidePosts}
+    title={t('zh', 'allGuides')}
+    lang="zh"
+  />
+</Layout>

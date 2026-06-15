@@ -167,6 +167,7 @@ html {
   top: var(--space-xl);
   max-height: calc(100vh - var(--space-3xl));
   overflow-y: auto;
+  margin-top: 1.625rem;
 }
 
 .article-toc ul {

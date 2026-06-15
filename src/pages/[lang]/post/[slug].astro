@@ -18,17 +18,24 @@ export function getStaticPaths() {
 const { lang, slug } = Astro.params as { lang: Lang; slug: string };
 const post = getPostBySlug(slug, lang);
 
-if (!post) {
-  return Astro.redirect('/404');
-}
+let dateStr = '';
+let renderedContent = '';
+let headings: { level: number; text: string; slug: string }[] = [];
+let originUrl = '';
+let originHostname = '';
 
-const dateStr = formatDateTime(post.publishDate, lang === 'en' ? 'en-US' : 'zh-CN');
-const renderedContent = post.content ? renderMarkdown(post.content) : '';
-const headings = post.content ? extractHeadings(post.content) : [];
-const originUrl = post.origin || post.sourceUrl;
-const originHostname = originUrl ? (() => { try { return new URL(originUrl).hostname.replace(/^www\./, ''); } catch { return ''; } })() : '';
+if (!post) {
+  Astro.response.status = 404;
+} else {
+  dateStr = formatDateTime(post.publishDate, lang === 'en' ? 'en-US' : 'zh-CN');
+  renderedContent = post.content ? renderMarkdown(post.content) : '';
+  headings = post.content ? extractHeadings(post.content) : [];
+  originUrl = post.origin || post.sourceUrl || '';
+  originHostname = originUrl ? (() => { try { return new URL(originUrl).hostname.replace(/^www\./, ''); } catch { return ''; } })() : '';
+}
 ---
 
+{post ? (
 <Layout 
   lang={lang}
   title={`${post.title} - Indie Story`}
@@ -58,7 +65,7 @@ const originHostname = originUrl ? (() => { try { return new URL(originUrl).host
           {post.author && (
             <span>{post.author}</span>
           )}
-                    {originUrl && (
+          {originUrl && (
             <a href={originUrl} target="_blank" rel="noopener noreferrer" class="origin-link-header">
               <ExternalLink size={12} />
               <span>{originHostname}</span>
@@ -93,10 +100,10 @@ const originHostname = originUrl ? (() => { try { return new URL(originUrl).host
       
       {/* Post footer */}
       <footer style="margin-top: var(--space-3xl); padding-top: var(--space-2xl);">
-        {(post.origin || post.sourceUrl) && (
+        {originUrl && (
           <div style="margin-bottom: var(--space-2xl); padding-bottom: var(--space-2xl); text-align: center;">
             <a 
-              href={post.origin || post.sourceUrl!}
+              href={originUrl}
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center gap-2 font-sans text-sm text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-colors underline underline-offset-4"
@@ -134,36 +141,48 @@ const originHostname = originUrl ? (() => { try { return new URL(originUrl).host
     )}
   </div>
 </Layout>
+) : (
+<Layout lang={lang} title="404 - Indie Story" showUpdateTime={false}>
+  <div class="text-center" style="padding: var(--space-4xl) 0;">
+    <h1 class="font-display text-4xl font-semibold text-[var(--color-text)]" style="margin-bottom: var(--space-md);">404</h1>
+    <p class="font-sans text-sm text-[var(--color-text-muted)]">{lang === 'en' ? 'Page not found' : '页面未找到'}</p>
+  </div>
+</Layout>
+)}
 
 <script>
   const tocLinks = document.querySelectorAll('#article-toc a');
-  const headings = Array.from(document.querySelectorAll('.article-content h2, .article-content h3'))
+  const headingEls = Array.from(document.querySelectorAll('.article-content h2, .article-content h3'))
     .filter(h => h.id);
 
-  if (headings.length > 0 && tocLinks.length > 0) {
-    const observer = new IntersectionObserver((entries) => {
-      let activeId = '';
-      for (const entry of entries) {
-        if (entry.isIntersecting) {
-          activeId = entry.target.id;
-          break;
-        }
-      }
-      if (!activeId && entries.some(e => e.boundingClientRect.top < 0)) {
-        // If nothing is intersecting and we've scrolled past the first heading,
-        // pick the last heading above viewport
-        activeId = entries.filter(e => e.boundingClientRect.top < 0)
-          .sort((a, b) => b.boundingClientRect.top - a.boundingClientRect.top)[0]?.target?.id || '';
-      }
+  function updateActiveHeading() {
+    const offset = 80;
+    let activeId = '';
 
-      tocLinks.forEach(link => {
-        link.classList.toggle('toc-active', link.getAttribute('href') === `#${activeId}`);
-      });
-    }, {
-      rootMargin: '-80px 0px -40% 0px',
-      threshold: 0,
+    for (const h of headingEls) {
+      if (h.getBoundingClientRect().top <= offset) {
+        activeId = h.id;
+      } else {
+        break;
+      }
+    }
+
+    tocLinks.forEach(link => {
+      link.classList.toggle('toc-active', link.getAttribute('href') === `#${activeId}`);
     });
+  }
 
-    headings.forEach(h => observer.observe(h));
+  if (headingEls.length > 0 && tocLinks.length > 0) {
+    let ticking = false;
+    document.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateActiveHeading();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+    updateActiveHeading();
   }
 </script>

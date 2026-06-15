@@ -6,42 +6,42 @@
 
 /* CSS Variables */
 :root {
-  --color-bg: #FAF9F6;
-  --color-text: #1a1a1a;
-  --color-text-muted: #666666;
-  --color-text-light: #999999;
-  --color-border: #eae8e3;
-  --color-border-dark: #d8d5ce;
-  --color-accent: #3a5a3a;
-  --color-hover: var(--color-accent);
-  --color-surface-subtle: #f3f2ee;
+	--color-bg: #faf9f6;
+	--color-text: #1a1a1a;
+	--color-text-muted: #666666;
+	--color-text-light: #999999;
+	--color-border: #eae8e3;
+	--color-border-dark: #d8d5ce;
+	--color-accent: #3a5a3a;
+	--color-hover: var(--color-accent);
+	--color-surface-subtle: #f3f2ee;
 
-  /* Spacing scale (4pt base) */
-  --space-2xs: 4px;
-  --space-xs: 8px;
-  --space-sm: 12px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 32px;
-  --space-2xl: 48px;
-  --space-3xl: 64px;
-  --space-4xl: 96px;
+	/* Spacing scale (4pt base) */
+	--space-2xs: 4px;
+	--space-xs: 8px;
+	--space-sm: 12px;
+	--space-md: 16px;
+	--space-lg: 24px;
+	--space-xl: 32px;
+	--space-2xl: 48px;
+	--space-3xl: 64px;
+	--space-4xl: 96px;
 
-  /* Layout */
-  --content-max-width: 960px;
-  --content-padding: var(--space-md);
+	/* Layout */
+	--content-max-width: 1024px;
+	--content-padding: var(--space-md);
 }
 
 @media (min-width: 640px) {
-  :root {
-    --content-padding: var(--space-lg);
-  }
+	:root {
+		--content-padding: var(--space-lg);
+	}
 }
 
 @media (min-width: 1024px) {
-  :root {
-    --content-padding: var(--space-xl);
-  }
+	:root {
+		--content-padding: var(--space-xl);
+	}
 }
 
 /* Base Styles */
@@ -203,7 +203,8 @@ a:hover {
 	border: none;
 	border-top: 1px solid var(--color-border);
 	margin: 2em 0;
-}page-flip-container {
+}
+page-flip-container {
 	position: relative;
 	width: 100%;
 	display: flex;
@@ -222,7 +223,7 @@ a:hover {
 }
 
 .page-flip-container .page-content {
-	background: linear-gradient(to right, var(--color-bg) 0%, var(--color-bg) 95%, rgba(0,0,0,0.02) 100%);
+	background: linear-gradient(to right, var(--color-bg) 0%, var(--color-bg) 95%, rgba(0, 0, 0, 0.02) 100%);
 }
 
 /* 书页阴影效果 */

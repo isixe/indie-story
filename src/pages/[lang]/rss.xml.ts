@@ -1,5 +1,5 @@
 import rss from '@astrojs/rss';
-import { getAllPosts } from '../../utils/posts';
+import { getPostsByLang } from '../../utils/posts';
 import { t, type Lang } from '../../i18n';
 
 export function getStaticPaths() {
@@ -11,7 +11,7 @@ export function getStaticPaths() {
 
 export function GET({ params }: { params: { lang: string } }) {
   const lang = params.lang as Lang;
-  const posts = getAllPosts();
+  const posts = getPostsByLang(lang);
   const siteUrl = 'https://indie-story.dev';
   const langPrefix = lang === 'en' ? '/en' : '';
 

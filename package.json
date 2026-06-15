@@ -12,10 +12,13 @@
   "dependencies": {
     "@astrojs/react": "^4.2.5",
     "@astrojs/rss": "^4.0.18",
+    "@chinese-fonts/lxgwwenkai": "^3.0.0",
     "astro": "^5.7.10",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "gray-matter": "^4.0.3",
     "lucide-react": "^0.487.0",
+    "marked": "^18.0.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwind-merge": "^3.2.0"

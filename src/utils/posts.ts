@@ -11,6 +11,8 @@ export interface Post {
   updateDate?: Date;
   description?: string;
   sourceUrl?: string;
+  author?: string;
+  origin?: string;
   content?: string;
   lang?: string;
 }
@@ -37,6 +39,8 @@ const posts: Post[] = Object.entries(mdModules).map(([filepath, mod]) => {
     updateDate: data.updateDate ? new Date(data.updateDate as string) : undefined,
     description: data.description as string | undefined,
     sourceUrl: data.sourceUrl as string | undefined,
+    author: data.author as string | undefined,
+    origin: data.origin as string | undefined,
     content: parsed.content,
     lang,
   };

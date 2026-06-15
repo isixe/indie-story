@@ -2,6 +2,8 @@
 slug: 'micro-saas-success'
 title: '微型SaaS：小而美的商业模式'
 blogName: 'SaaS创业者'
+author: ''
+origin: ''
 category: 'story'
 tags: ['独立开发', 'SaaS', '商业模式']
 publishDate: '2024-05-28'

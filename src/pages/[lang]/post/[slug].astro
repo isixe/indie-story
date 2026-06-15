@@ -32,7 +32,7 @@ const renderedContent = post.content ? renderMarkdown(post.content) : '';
   description={post.description || post.title}
   showUpdateTime={false}
 >
-  <article class="mx-auto" style="max-width: 672px;">
+  <article class="mx-auto article-page">
     {/* Back button */}
     <a 
       href={`/${lang}/`}
@@ -51,7 +51,15 @@ const renderedContent = post.content ? renderMarkdown(post.content) : '';
       <h1 class="font-display text-2xl sm:text-3xl font-semibold text-[var(--color-text)] leading-tight" style="margin-bottom: var(--space-lg);">
         {post.title}
       </h1>
-      <div class="flex flex-wrap items-center gap-4 font-sans text-xs text-[var(--color-text-muted)]">
+      <div class="flex flex-wrap items-center gap-4 font-sans text-sm text-[var(--color-text-muted)]">
+        {post.author && (
+          <span>{post.author}</span>
+        )}
+        {(post.origin || post.sourceUrl) && (
+          <a href={post.origin || post.sourceUrl!} target="_blank" rel="noopener noreferrer" class="hover:text-[var(--color-hover)] transition-colors underline underline-offset-2">
+            {t(lang, 'origin')}
+          </a>
+        )}
         <time>{dateStr}</time>
         {post.category === 'story' ? (
           <span class="px-2 py-1 text-[var(--color-text-muted)]" style="background-color: var(--color-surface-subtle);">{t(lang, 'categoryStory')}</span>
@@ -62,9 +70,9 @@ const renderedContent = post.content ? renderMarkdown(post.content) : '';
       {post.tags && post.tags.length > 0 && (
         <div class="flex flex-wrap gap-2" style="margin-top: var(--space-md);">
           {post.tags.map((tag) => (
-            <span class="font-sans text-xs text-[var(--color-text-light)]">
+            <a href={`/${lang}/?tag=${encodeURIComponent(tag)}`} class="font-sans text-sm text-[var(--color-text-light)] hover:text-[var(--color-hover)] transition-colors">
               #{tag}
-            </span>
+            </a>
           ))}
         </div>
       )}
@@ -81,6 +89,19 @@ const renderedContent = post.content ? renderMarkdown(post.content) : '';
     
     {/* Post footer */}
     <footer style="margin-top: var(--space-3xl); padding-top: var(--space-2xl);">
+      {(post.origin || post.sourceUrl) && (
+        <div style="margin-bottom: var(--space-2xl); padding-bottom: var(--space-2xl); text-align: center;">
+          <a 
+            href={post.origin || post.sourceUrl!}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 font-sans text-sm text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-colors underline underline-offset-4"
+          >
+            {t(lang, 'origin')}
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      )}
       <a 
         href={`/${lang}/`}
         class="inline-flex items-center gap-2 font-sans text-sm text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-colors group"

@@ -2,6 +2,8 @@
 slug: 'solo-tech-guide'
 title: 'The Independent Tech Person Guide'
 blogName: 'Osfpu'
+author: 'Osfpu'
+origin: 'https://w2solo.com/topics/2517'
 category: 'guide'
 tags: ['indie developer', 'solo developer', 'guide', 'financial independence', 'freelance']
 publishDate: '2021-05-05'
@@ -16,8 +18,6 @@ Have you ever heard of "indie developers"? Abroad, indie developers are also cal
 2. Ultimately seek financial independence, creative freedom, and flexibility in when and where they work through personal projects
 
 So what is an **Independent Tech Person** (a term I coined ^ ^)? Building on the indie developer concept, it's someone who uses technology as their foundation but has more income options, including but not limited to tech consulting, online courses, content creation, and publishing books — ultimately achieving financial independence and autonomous work.
-
-![giphy3](https://blog.osfpu.com/images/giphy3.png)
 
 I've always aspired to be an independent tech person. This article summarizes information I've gathered on the subject and shares some personal thoughts, hoping to help others who want to walk this path.
 
@@ -38,8 +38,6 @@ Some of you might be like me — not particularly fond of money,懒得理财, wi
 But honestly, everyone is just trying to support their families and pursue their dreams. As long as they follow the law and道德底线, what's wrong with working hard to make money?
 
 I hope you'll learn to**love money more** — ethically, of course. (Recommended financial启蒙书: [_Rich Dad Poor Dad_](https://book.douban.com/subject/1033778/))
-
-![giphy](https://blog.osfpu.com/images/giphy.png)
 
 You might notice I've been using "financial independence" instead of "financial freedom." What's the difference? A simple example:
 
@@ -103,8 +101,6 @@ Trust the times. Trust yourself.
 
 Keep your eyes on the stars and your feet on the ground.
 
-![image-20210505192539297](https://blog.osfpu.com/images/image-20210505192539297.png)
-
 ## Possible Paths
 
 Though the indie community is small, there's already plenty of成熟经验. No need to explore everything yourself.
@@ -128,8 +124,6 @@ IndieHackers offers a valuable "6-step success" framework:
 4. **Build your MVP**. Don't be a perfectionist — just make it work!
 5. **Find your first customer**. The goal is feedback — iterate before the official launch
 6. **Launch! Keep iterating!**
-
-![giphy5](https://blog.osfpu.com/images/giphy5.png)
 
 ## Your Superpowers
 
@@ -156,5 +150,3 @@ This article explores one possibility for my career development. Let me introduc
 - Recently into humanities books, hoping to step out of Plato's "cave" and find my own **spiritual freedom**
 
 Lastly, never forget that **happiness** is our ultimate goal — nothing else matters. If you feel happy going to work, starting a business, being single, or staying home — protect your own path to happiness. **"Independence" is not a prerequisite for happiness — a healthy body and mind are.**
-
-![giphy (1)](https://blog.osfpu.com/images/giphy1.png)

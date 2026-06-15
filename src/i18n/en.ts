@@ -66,6 +66,7 @@ export const en = {
   backToArticleList: 'Back to Articles',
   categoryStory: 'Story',
   categoryGuide: 'Guide',
+  origin: 'Original',
   contentLoading: 'Loading content...',
 
   // Post list

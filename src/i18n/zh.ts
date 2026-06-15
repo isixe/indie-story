@@ -66,6 +66,7 @@ export const zh = {
   backToArticleList: '返回文章列表',
   categoryStory: '故事',
   categoryGuide: '指南',
+  origin: '原文',
   contentLoading: '文章内容加载中...',
 
   // Post list

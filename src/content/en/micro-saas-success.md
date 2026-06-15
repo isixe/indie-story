@@ -2,6 +2,8 @@
 slug: 'micro-saas-success'
 title: 'Micro SaaS: Small but Beautiful Business Model'
 blogName: 'SaaS Founder'
+author: ''
+origin: ''
 category: 'story'
 tags: ['indie dev', 'SaaS', 'business model']
 publishDate: '2024-05-28'

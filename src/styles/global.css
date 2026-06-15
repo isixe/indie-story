@@ -138,6 +138,15 @@ a:hover {
 	animation: fadeInUp 0.4s ease-out forwards;
 }
 
+/* Article Page Styles */
+.article-page {
+  width: 100%;
+}
+
+.article-page > header {
+  width: 100%;
+}
+
 /* Article Content Styles */
 .article-content {
 	font-size: 1.05rem;
@@ -160,10 +169,16 @@ a:hover {
 	margin-bottom: 0.6em;
 }
 
-.article-content ul,
+.article-content ul {
+	margin-bottom: 1.5em;
+	padding-left: 1.5em;
+	list-style-type: disc;
+}
+
 .article-content ol {
 	margin-bottom: 1.5em;
 	padding-left: 1.5em;
+	list-style-type: decimal;
 }
 
 .article-content li {

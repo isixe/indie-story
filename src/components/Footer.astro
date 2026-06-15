@@ -16,7 +16,7 @@ const lang = Astro.props.lang || getLangFromPath(Astro.url.pathname);
     </p>
     <div class="flex items-center gap-4">
       <a
-        href={lang === 'en' ? '/en/rss.xml' : '/rss.xml'}
+        href={`/${lang}/rss.xml`}
         class="font-sans text-xs text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-colors"
         target="_blank"
         rel="noopener noreferrer"

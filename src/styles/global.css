@@ -138,13 +138,101 @@ a:hover {
 	animation: fadeInUp 0.4s ease-out forwards;
 }
 
-/* Article Page Styles */
-.article-page {
-  width: 100%;
+html {
+  scroll-behavior: smooth;
 }
 
-.article-page > header {
-  width: 100%;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Article Layout */
+.article-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 672px) 220px;
+  gap: var(--space-2xl);
+  justify-content: center;
+  align-items: start;
+}
+
+.article-main {
+  min-width: 0;
+}
+
+/* Article TOC Sidebar */
+.article-toc {
+  position: sticky;
+  top: var(--space-xl);
+  max-height: calc(100vh - var(--space-3xl));
+  overflow-y: auto;
+}
+
+.article-toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.article-toc li {
+  margin-bottom: 0.5em;
+}
+
+.article-toc .toc-level-3 {
+  padding-left: 1em;
+}
+
+.article-toc a {
+  display: block;
+  line-height: 1.4;
+  border-left: 2px solid transparent;
+  padding-left: 0.75em;
+}
+
+.article-toc a.toc-active {
+  color: var(--color-text);
+  font-weight: 600;
+  border-left-color: var(--color-text);
+}
+
+.toc-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-light);
+  margin-bottom: var(--space-md);
+}
+
+/* Origin link in header */
+.origin-link-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  padding: 0.25em 0.6em;
+  border-radius: 4px;
+  background-color: var(--color-surface-subtle);
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.origin-link-header:hover {
+  color: var(--color-hover);
+  background-color: var(--color-surface-hover, var(--color-surface-subtle));
+}
+
+/* Hide TOC on mobile/tablet */
+@media (max-width: 1024px) {
+  .article-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .article-toc {
+    display: none;
+  }
 }
 
 /* Article Content Styles */

@@ -46,8 +46,43 @@ const posts: Post[] = Object.entries(mdModules).map(([filepath, mod]) => {
   };
 });
 
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s\u4e00-\u9fa5-]/g, '')
+    .replace(/[\s]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+const renderer = new marked.Renderer();
+renderer.heading = function ({ text, depth }: { text: string; depth: number }) {
+  const slug = slugify(text);
+  return `<h${depth} id="${slug}">${text}</h${depth}>`;
+};
+
+marked.use({ renderer });
+
 export function renderMarkdown(content: string): string {
   return marked.parse(content, { async: false }) as string;
+}
+
+export interface Heading {
+  level: number;
+  text: string;
+  slug: string;
+}
+
+export function extractHeadings(markdown: string): Heading[] {
+  const headingRegex = /^(#{2,3})\s+(.+)$/gm;
+  const headings: Heading[] = [];
+  let match;
+  while ((match = headingRegex.exec(markdown)) !== null) {
+    const level = match[1].length;
+    const text = match[2].trim().replace(/[`*_~]/g, '');
+    const slug = slugify(text);
+    headings.push({ level, text, slug });
+  }
+  return headings;
 }
 
 export function getPostsByLang(lang: string): Post[] {

@@ -68,6 +68,7 @@ export const zh = {
   categoryGuide: '指南',
   origin: '原文',
   contentLoading: '文章内容加载中...',
+  onThisPage: '本页目录',
 
   // Post list
   page: 'Page {current} / {total}',

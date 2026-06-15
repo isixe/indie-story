@@ -68,6 +68,7 @@ export const en = {
   categoryGuide: 'Guide',
   origin: 'Original',
   contentLoading: 'Loading content...',
+  onThisPage: 'On This Page',
 
   // Post list
   page: 'Page {current} / {total}',

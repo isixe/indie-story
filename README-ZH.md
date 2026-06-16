@@ -1,4 +1,12 @@
+[English](README.md) | [中文](README-ZH.md)
+
+---
+
 # Indie Story
+
+独立开发者故事与实战指南的收集站。
+
+---
 
 ## 📚 文章列表
 
@@ -10,4 +18,4 @@
 
 - [独立技术人指南](https://indiestory.itea.dev/zh/post/solo-tech-guide)
 
-
+---

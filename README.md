@@ -1,4 +1,12 @@
+[English](README.md) | [中文](README-ZH.md)
+
+---
+
 # Indie Story
+
+A curated collection of real indie developer stories and practical guides. 
+
+---
 
 ## Articles
 

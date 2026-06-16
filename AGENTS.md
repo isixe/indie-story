@@ -18,12 +18,12 @@ No lint/formatter config exists. No test runner.
 
 The site has TWO sets of pages serving the same content:
 
-| Path | Language | Source |
-|------|----------|--------|
-| `/` | zh | `src/pages/index.astro` |
-| `/zh/...` | zh | `src/pages/[lang]/...` (dynamic) |
-| `/en/...` | en | `src/pages/[lang]/...` (dynamic) |
-| `/about`, `/stories`, `/guides` | zh | root `about.astro`, `stories.astro`, `guides.astro` |
+| Path                            | Language | Source                                              |
+| ------------------------------- | -------- | --------------------------------------------------- |
+| `/`                             | zh       | `src/pages/index.astro`                             |
+| `/zh/...`                       | zh       | `src/pages/[lang]/...` (dynamic)                    |
+| `/en/...`                       | en       | `src/pages/[lang]/...` (dynamic)                    |
+| `/about`, `/stories`, `/guides` | zh       | root `about.astro`, `stories.astro`, `guides.astro` |
 
 - Root routes (`/about`, `/stories`, `/guides`) are hardcoded to zh — they exist so `/about` works without `/zh/about`.
 - All routes under `[lang]/` generate for both `zh` and `en` via `getStaticPaths()`.
@@ -89,10 +89,6 @@ Post detail pages (`[lang]/post/[slug].astro`) extract h2/h3 headings from markd
 ### Pagination
 
 Page size = 20. Page 1 is always the index page. Pages 2+ use `page/{n}` route. `Pagination.astro` handles prev/next links with disabled states.
-
-### Placeholder content
-
-Scripts in `scripts/` (`generate-placeholders.cjs`, `generate-placeholders.ps1`) generate 60 placeholder markdown files (30 zh + 30 en). Content has "being written" placeholder text.
 
 ## Common operations
 

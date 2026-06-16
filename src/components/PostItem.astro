@@ -15,7 +15,7 @@ const dateStr = formatDateTime(post.publishDate, locale);
 ---
 
 <article class="group" style="padding: var(--space-md) 0;">
-  <a href={`/post/${post.slug}`} class="block post-item-link" style="padding: var(--space-xs) var(--space-sm); margin: 0 calc(var(--space-sm) * -1); border-radius: 4px;">
+  <a href={`/${lang}/post/${post.slug}`} class="block post-item-link" style="padding: var(--space-xs) var(--space-sm); margin: 0 calc(var(--space-sm) * -1); border-radius: 4px;">
     <div class="flex flex-col" style="gap: var(--space-2xs);">
       <div class="flex items-baseline justify-between gap-4">
         <div class="flex-1 min-w-0">

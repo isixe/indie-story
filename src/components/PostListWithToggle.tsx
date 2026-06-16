@@ -12,7 +12,7 @@ interface PostListWithToggleProps {
   lang?: Lang;
 }
 
-function PostItem({ post, locale }: { post: Post; locale: string }) {
+function PostItem({ post, locale, lang }: { post: Post; locale: string; lang: Lang }) {
   const [hovered, setHovered] = useState(false);
   const formatDateTime = (date: Date) => {
     return date.toLocaleString(locale, {
@@ -27,7 +27,7 @@ function PostItem({ post, locale }: { post: Post; locale: string }) {
   return (
     <article className="group" style={{padding: '0.75rem 0'}}>
       <a
-        href={`/post/${post.slug}`}
+        href={`/${lang}/post/${post.slug}`}
         className="block"
         style={{
           padding: 'var(--space-xs) var(--space-sm)',
@@ -106,12 +106,12 @@ export default function PostListWithToggle({
         <div className="lg:grid lg:grid-cols-2 lg:gap-x-12">
           <div>
             {posts.filter((_, i) => i % 2 === 0).map((post) => (
-              <PostItem key={post.slug} post={post} locale={locale} />
+              <PostItem key={post.slug} post={post} locale={locale} lang={lang} />
             ))}
           </div>
           <div>
             {posts.filter((_, i) => i % 2 === 1).map((post) => (
-              <PostItem key={post.slug} post={post} locale={locale} />
+              <PostItem key={post.slug} post={post} locale={locale} lang={lang} />
             ))}
           </div>
         </div>
@@ -162,19 +162,19 @@ export default function PostListWithToggle({
         <div className="lg:grid lg:grid-cols-2 lg:gap-x-12">
           <div>
             {posts.filter((_, i) => i % 2 === 0).map((post) => (
-              <PostItem key={post.slug} post={post} locale={locale} />
+              <PostItem key={post.slug} post={post} locale={locale} lang={lang} />
             ))}
           </div>
           <div>
             {posts.filter((_, i) => i % 2 === 1).map((post) => (
-              <PostItem key={post.slug} post={post} locale={locale} />
+              <PostItem key={post.slug} post={post} locale={locale} lang={lang} />
             ))}
           </div>
         </div>
       ) : (
         <div className="w-full">
           {posts.map((post) => (
-            <PostItem key={post.slug} post={post} locale={locale} />
+            <PostItem key={post.slug} post={post} locale={locale} lang={lang} />
           ))}
         </div>
       )}

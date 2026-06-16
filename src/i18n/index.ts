@@ -30,7 +30,7 @@ export function getAlternateLangPath(pathname: string): string {
   // Strip any existing /zh or /en prefix first, then add the opposite
   const clean = pathname.replace(/^\/(zh|en)/, '') || '/';
   if (pathname.startsWith('/en')) {
-    return clean;
+    return `/zh${clean}`;
   }
   return `/en${clean}`;
 }

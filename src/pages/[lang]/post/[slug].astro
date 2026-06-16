@@ -1,188 +1,209 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
-import { getPostBySlug, getPostsByLang, formatDateTime, renderMarkdown, extractHeadings } from '../../../utils/posts';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
-import { t, type Lang } from '../../../i18n';
+import Layout from "../../../layouts/Layout.astro";
+import { getPostBySlug, getPostsByLang, formatDateTime, renderMarkdown, extractHeadings } from "../../../utils/posts";
+import { ArrowLeft, ExternalLink } from "lucide-react";
+import { t, type Lang } from "../../../i18n";
 
 export function getStaticPaths() {
-  const paths: { params: { lang: string; slug: string } }[] = [];
-  for (const lang of ['zh', 'en'] as const) {
-    const langPosts = getPostsByLang(lang);
-    for (const post of langPosts) {
-      paths.push({ params: { lang, slug: post.slug } });
-    }
-  }
-  return paths;
+	const paths: { params: { lang: string; slug: string } }[] = [];
+	for (const lang of ["zh", "en"] as const) {
+		const langPosts = getPostsByLang(lang);
+		for (const post of langPosts) {
+			paths.push({ params: { lang, slug: post.slug } });
+		}
+	}
+	return paths;
 }
 
 const { lang, slug } = Astro.params as { lang: Lang; slug: string };
 const post = getPostBySlug(slug, lang);
 
-let dateStr = '';
-let renderedContent = '';
+let dateStr = "";
+let renderedContent = "";
 let headings: { level: number; text: string; slug: string }[] = [];
-let originUrl = '';
-let originHostname = '';
+let originUrl = "";
+let originHostname = "";
 
 if (!post) {
-  Astro.response.status = 404;
+	Astro.response.status = 404;
 } else {
-  dateStr = formatDateTime(post.publishDate, lang === 'en' ? 'en-US' : 'zh-CN');
-  renderedContent = post.content ? renderMarkdown(post.content) : '';
-  headings = post.content ? extractHeadings(post.content) : [];
-  originUrl = post.origin || post.sourceUrl || '';
-  originHostname = originUrl ? (() => { try { return new URL(originUrl).hostname.replace(/^www\./, ''); } catch { return ''; } })() : '';
+	dateStr = formatDateTime(post.publishDate, lang === "en" ? "en-US" : "zh-CN");
+	renderedContent = post.content ? renderMarkdown(post.content) : "";
+	headings = post.content ? extractHeadings(post.content) : [];
+	originUrl = post.origin || post.sourceUrl || "";
+	originHostname = originUrl
+		? (() => {
+				try {
+					return new URL(originUrl).hostname.replace(/^www\./, "");
+				} catch {
+					return "";
+				}
+			})()
+		: "";
 }
 ---
 
-{post ? (
-<Layout 
-  lang={lang}
-  title={`${post.title} - Indie Story`}
-  description={post.description || post.title}
-  showUpdateTime={false}
->
-  <a 
-    href={`/${lang}/`}
-    class="inline-flex items-center gap-2 font-sans text-xs text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-colors group"
-    style="margin-bottom: var(--space-2xl);"
-  >
-    <ArrowLeft size={14} class="group-hover:-translate-x-1 transition-transform" />
-    {t(lang, 'backToList')}
-  </a>
+{
+	post ? (
+		<Layout
+			lang={lang}
+			title={`${post.title} - Indie Story`}
+			description={post.description || post.title}
+			showUpdateTime={false}>
+			<a
+				href={`/${lang}/`}
+				class="inline-flex items-center gap-2 font-sans text-xs text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-colors group"
+				style="margin-bottom: var(--space-2xl);">
+				<ArrowLeft size={14} class="group-hover:-translate-x-1 transition-transform" />
+				{t(lang, "backToList")}
+			</a>
 
-  <div class="article-layout">
-    <main class="article-main">
-      {/* Post header */}
-      <header id="article-header" style="margin-bottom: var(--space-2xl); padding-bottom: var(--space-2xl);">
-        <p class="font-sans text-xs text-[var(--color-text-light)] uppercase tracking-wide" style="margin-bottom: var(--space-sm);">
-          {post.blogName}
-        </p>
-        <h1 class="font-display text-2xl sm:text-3xl font-semibold text-[var(--color-text)] leading-tight" style="margin-bottom: var(--space-lg);">
-          {post.title}
-        </h1>
-        <div class="flex flex-wrap items-center gap-4 font-sans text-sm text-[var(--color-text-muted)]">
-          {post.author && (
-            <span>{post.author}</span>
-          )}
-          {originUrl && (
-            <a href={originUrl} target="_blank" rel="noopener noreferrer" class="origin-link-header">
-              <ExternalLink size={12} />
-              <span>{originHostname}</span>
-            </a>
-          )}
-          <time>{dateStr}</time>
-          {post.category === 'story' ? (
-            <span class="px-2 py-1 text-[var(--color-text-muted)]" style="background-color: var(--color-surface-subtle);">{t(lang, 'categoryStory')}</span>
-          ) : (
-            <span class="px-2 py-1 text-[var(--color-text-muted)]" style="background-color: var(--color-surface-subtle);">{t(lang, 'categoryGuide')}</span>
-          )}
-        </div>
-        {post.tags && post.tags.length > 0 && (
-          <div class="flex flex-wrap gap-2" style="margin-top: var(--space-md);">
-            {post.tags.map((tag) => (
-              <a href={`/${lang}/?tag=${encodeURIComponent(tag)}`} class="font-sans text-sm text-[var(--color-text-light)] hover:text-[var(--color-hover)] transition-colors">
-                #{tag}
-              </a>
-            ))}
-          </div>
-        )}
-      </header>
-      
-      {/* Post content */}
-      <div class="article-content text-[var(--color-text)]">
-        {renderedContent ? (
-          <div set:html={renderedContent} />
-        ) : (
-          <p class="text-[var(--color-text-muted)] italic">{t(lang, 'contentLoading')}</p>
-        )}
-      </div>
-      
-      {/* Post footer */}
-      <footer style="margin-top: var(--space-3xl); padding-top: var(--space-2xl);">
-        {originUrl && (
-          <div style="margin-bottom: var(--space-2xl); padding-bottom: var(--space-2xl); text-align: center;">
-            <a 
-              href={originUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 font-sans text-sm text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-colors underline underline-offset-4"
-            >
-              {t(lang, 'origin')}
-              <ExternalLink size={12} />
-            </a>
-          </div>
-        )}
-        <a 
-          href={`/${lang}/`}
-          class="inline-flex items-center gap-2 font-sans text-sm text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-colors group"
-        >
-          <ArrowLeft size={16} class="group-hover:-translate-x-1 transition-transform" />
-          {t(lang, 'backToArticleList')}
-        </a>
-      </footer>
-    </main>
+			<div class="article-layout">
+				<main class="article-main">
+					{/* Post header */}
+					<header id="article-header" style="margin-bottom: var(--space-2xl);">
+						<p
+							class="font-sans text-xs text-[var(--color-text-light)] uppercase tracking-wide"
+							style="margin-bottom: var(--space-sm);">
+							{post.blogName}
+						</p>
+						<h1
+							class="font-display text-2xl sm:text-3xl font-semibold text-[var(--color-text)] leading-tight"
+							style="margin-bottom: var(--space-lg);">
+							{post.title}
+						</h1>
+						<div class="flex flex-wrap items-center gap-4 font-sans text-sm text-[var(--color-text-muted)]">
+							{post.author && <span>{post.author}</span>}
+							<time>{dateStr}</time>
+							{post.category === "story" ? (
+								<span
+									class="px-2 py-1 text-[var(--color-text-muted)]"
+									style="background-color: var(--color-surface-subtle);">
+									{t(lang, "categoryStory")}
+								</span>
+							) : (
+								<span
+									class="px-2 py-1 text-[var(--color-text-muted)]"
+									style="background-color: var(--color-surface-subtle);">
+									{t(lang, "categoryGuide")}
+								</span>
+							)}
+						</div>
+						{post.tags && post.tags.length > 0 && (
+							<div class="flex flex-wrap gap-2" style="margin-top: var(--space-md);">
+								{post.tags.map((tag) => (
+									<a
+										href={`/${lang}/?tag=${encodeURIComponent(tag)}`}
+										class="font-sans text-sm text-[var(--color-text-light)] hover:text-[var(--color-hover)] transition-colors">
+										#{tag}
+									</a>
+								))}
+							</div>
+						)}
+					</header>
 
-    {headings.length > 0 && (
-      <aside class="article-toc" id="article-toc">
-        <nav>
-          <p class="toc-label">{t(lang, 'onThisPage')}</p>
-          <ul>
-            {headings.map((h) => (
-              <li class={`toc-item toc-level-${h.level}`}>
-                <a href={`#${h.slug}`} class="font-sans text-sm text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-colors duration-200">
-                  {h.text}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </aside>
-    )}
-  </div>
-</Layout>
-) : (
-<Layout lang={lang} title="404 - Indie Story" showUpdateTime={false}>
-  <div class="text-center" style="padding: var(--space-4xl) 0;">
-    <h1 class="font-display text-4xl font-semibold text-[var(--color-text)]" style="margin-bottom: var(--space-md);">404</h1>
-    <p class="font-sans text-sm text-[var(--color-text-muted)]">{lang === 'en' ? 'Page not found' : '页面未找到'}</p>
-  </div>
-</Layout>
-)}
+					{/* Post content */}
+					<div class="article-content text-[var(--color-text)]">
+						{renderedContent ? (
+							<div set:html={renderedContent} />
+						) : (
+							<p class="text-[var(--color-text-muted)] italic">{t(lang, "contentLoading")}</p>
+						)}
+					</div>
+
+					{/* Post footer */}
+					<footer style="margin-top: var(--space-3xl); padding-top: var(--space-2xl);">
+						{originUrl && (
+							<div style="margin-bottom: var(--space-2xl); padding-bottom: var(--space-2xl); text-align: center;">
+								<a
+									href={originUrl}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="inline-flex items-center gap-2 font-sans text-sm text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-colors underline underline-offset-4">
+									{t(lang, "origin")}
+									<ExternalLink size={12} />
+								</a>
+							</div>
+						)}
+						<a
+							href={`/${lang}/`}
+							class="inline-flex items-center gap-2 font-sans text-sm text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-colors group">
+							<ArrowLeft size={16} class="group-hover:-translate-x-1 transition-transform" />
+							{t(lang, "backToArticleList")}
+						</a>
+					</footer>
+				</main>
+
+				{headings.length > 0 && (
+					<aside class="article-toc" id="article-toc">
+						<nav>
+							<p class="toc-label">{t(lang, "onThisPage")}</p>
+							<ul>
+								{headings.map((h) => (
+									<li class={`toc-item toc-level-${h.level}`}>
+										<a
+											href={`#${h.slug}`}
+											class="font-sans text-sm text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-colors duration-200">
+											{h.text}
+										</a>
+									</li>
+								))}
+							</ul>
+						</nav>
+					</aside>
+				)}
+			</div>
+		</Layout>
+	) : (
+		<Layout lang={lang} title="404 - Indie Story" showUpdateTime={false}>
+			<div class="text-center" style="padding: var(--space-4xl) 0;">
+				<h1
+					class="font-display text-4xl font-semibold text-[var(--color-text)]"
+					style="margin-bottom: var(--space-md);">
+					404
+				</h1>
+				<p class="font-sans text-sm text-[var(--color-text-muted)]">
+					{lang === "en" ? "Page not found" : "页面未找到"}
+				</p>
+			</div>
+		</Layout>
+	)
+}
 
 <script>
-  const tocLinks = document.querySelectorAll('#article-toc a');
-  const headingEls = Array.from(document.querySelectorAll('.article-content h2, .article-content h3'))
-    .filter(h => h.id);
+	const tocLinks = document.querySelectorAll("#article-toc a");
+	const headingEls = Array.from(document.querySelectorAll(".article-content h2, .article-content h3")).filter(
+		(h) => h.id,
+	);
 
-  function updateActiveHeading() {
-    const scrollPos = window.scrollY + 100;
-    let activeId = headingEls[0]?.id || '';
+	function updateActiveHeading() {
+		const scrollPos = window.scrollY + 100;
+		let activeId = headingEls[0]?.id || "";
 
-    for (const h of headingEls) {
-      if (h.offsetTop <= scrollPos) {
-        activeId = h.id;
-      } else {
-        break;
-      }
-    }
+		for (const h of headingEls) {
+			if (h.offsetTop <= scrollPos) {
+				activeId = h.id;
+			} else {
+				break;
+			}
+		}
 
-    tocLinks.forEach(link => {
-      link.classList.toggle('toc-active', link.getAttribute('href') === `#${activeId}`);
-    });
-  }
+		tocLinks.forEach((link) => {
+			link.classList.toggle("toc-active", link.getAttribute("href") === `#${activeId}`);
+		});
+	}
 
-  if (headingEls.length > 0 && tocLinks.length > 0) {
-    let ticking = false;
-    document.addEventListener('scroll', () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          updateActiveHeading();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    });
-    updateActiveHeading();
-  }
+	if (headingEls.length > 0 && tocLinks.length > 0) {
+		let ticking = false;
+		document.addEventListener("scroll", () => {
+			if (!ticking) {
+				window.requestAnimationFrame(() => {
+					updateActiveHeading();
+					ticking = false;
+				});
+				ticking = true;
+			}
+		});
+		updateActiveHeading();
+	}
 </script>

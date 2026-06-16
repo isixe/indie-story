@@ -26,8 +26,9 @@ const totalPages = Math.ceil(storyPosts.length / pageSize);
 
 const { posts } = getPostsByCategoryAndPage('story', currentPage, 20, 'zh');
 
-if (currentPage > totalPages || currentPage < 2) {
-  return Astro.redirect('/zh/');
+const pageOutOfRange = currentPage > totalPages || currentPage < 2;
+if (pageOutOfRange) {
+  Astro.response.status = 404;
 }
 ---
 

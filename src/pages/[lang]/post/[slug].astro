@@ -156,11 +156,11 @@ if (!post) {
     .filter(h => h.id);
 
   function updateActiveHeading() {
-    const offset = 80;
-    let activeId = '';
+    const scrollPos = window.scrollY + 100;
+    let activeId = headingEls[0]?.id || '';
 
     for (const h of headingEls) {
-      if (h.getBoundingClientRect().top <= offset) {
+      if (h.offsetTop <= scrollPos) {
         activeId = h.id;
       } else {
         break;

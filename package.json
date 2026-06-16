@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "doc": "node scripts/update-readme-articles.cjs"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.5",

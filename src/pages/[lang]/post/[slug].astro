@@ -102,6 +102,24 @@ if (!post) {
 						)}
 					</header>
 
+					{originUrl && (
+						<div style="margin-bottom: var(--space-2xl); padding: var(--space-sm) 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+							<span class="inline-flex items-center gap-2 font-sans text-sm text-[var(--color-text-muted)]">
+								<span class="inline-flex items-center gap-1">
+									<ExternalLink size={14} />
+									{t(lang, "origin")}
+								</span>
+								<a
+									href={originUrl}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="inline-flex items-center gap-1 text-[var(--color-text)] hover:text-[var(--color-hover)] break-all">
+									{originHostname || originUrl}
+								</a>
+							</span>
+						</div>
+					)}
+
 					{/* Post content */}
 					<div class="article-content text-[var(--color-text)]">
 						{renderedContent ? (
@@ -113,18 +131,6 @@ if (!post) {
 
 					{/* Post footer */}
 					<footer style="margin-top: var(--space-3xl); padding-top: var(--space-2xl);">
-						{originUrl && (
-							<div style="margin-bottom: var(--space-2xl); padding-bottom: var(--space-2xl); text-align: center;">
-								<a
-									href={originUrl}
-									target="_blank"
-									rel="noopener noreferrer"
-									class="inline-flex items-center gap-2 font-sans text-sm text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-colors underline underline-offset-4">
-									{t(lang, "origin")}
-									<ExternalLink size={12} />
-								</a>
-							</div>
-						)}
 						<a
 							href={`/${lang}/`}
 							class="inline-flex items-center gap-2 font-sans text-sm text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-colors group">

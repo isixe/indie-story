@@ -1,152 +1,150 @@
 ---
 slug: 'solo-tech-guide'
 title: 'The Independent Tech Person Guide'
-blogName: 'Osfpu'
+blogName: 'w2solo'
 author: 'Osfpu'
 origin: 'https://w2solo.com/topics/2517'
 category: 'guide'
 tags: ['indie developer', 'solo developer', 'guide', 'financial independence', 'freelance']
 publishDate: '2021-05-05'
-description: 'A comprehensive guide about being an independent tech person, covering financial independence, success stories, career paths, required skills, and more.'
+description: 'A comprehensive summary about independent tech persons, covering financial independence, success stories, career paths, required skills, and more, to help those who want to walk the independent tech path find their direction.'
 ---
 
-> Originally published at [w2solo](https://w2solo.com/topics/2517) by Osfpu
+Have you ever heard of "indie developers"? Overseas, indie developers are also called "indie hackers" or "solo developers", representing people who:
 
-Have you ever heard of "indie developers"? Abroad, indie developers are also called "indie hackers" or "solo developers" — people who:
+1. Build profitable personal projects during their spare time or without a regular job
+2. Ultimately seek financial independence, creative freedom, flexible working hours, and location independence through personal projects
 
-1. Build profitable personal projects in their spare time or full-time
-2. Ultimately seek financial independence, creative freedom, and flexibility in when and where they work through personal projects
+So what is an **independent tech person** (a term I coined ^ ^)? Building on the concept of indie developers, it uses technology as a foundation but offers more ways to make money, including but not limited to tech consulting, selling online courses, monetizing self-media, publishing books — ultimately achieving financial independence and the freedom to work on your own terms.
 
-So what is an **Independent Tech Person** (a term I coined ^ ^)? Building on the indie developer concept, it's someone who uses technology as their foundation but has more income options, including but not limited to tech consulting, online courses, content creation, and publishing books — ultimately achieving financial independence and autonomous work.
-
-I've always aspired to be an independent tech person. This article summarizes information I've gathered on the subject and shares some personal thoughts, hoping to help others who want to walk this path.
+I've always aspired to be an independent tech person. This article summarizes information I've gathered about independent tech persons and shares some of my personal thoughts, hoping to help friends who also want to walk this path.
 
 ## Financial Independence? Freedom!
 
-True independence离不开 financial independence. Finance is the bread we live on — when that bread is held by someone else (parents, bosses), it's hard to stand tall and call ourselves "independent."
+True independence is inseparable from financial independence. In a sense, money is the bread we depend on to survive. When that bread is held by others (parents, bosses), it's hard to stand tall and call ourselves "independent."
 
-Don't underestimate the power of "bread." With it:
+Never underestimate the power of "bread." With it:
 
-- We don't have to fear our parents calling us worthless
-- We can see the world we want without worrying about being broke
-- We can afford our hobbies — who doesn't dream of opening a little bookstore or café (even if it'll probably lose money...)
+- We don't have to fear our parents calling us worthless or accusing us of not having a real job
+- We can go see the world we want to see, without worrying too much about being broke
+- We can afford our hobbies — who doesn't want to own a little bookstore or a beautiful café? (Even though they'll probably lose money...)
 
-Before your personal projects generate stable income, be sure to save money and avoid impulse spending. When you have your own little "capital," you truly feel freer!
+Before your personal projects generate stable income, make sure to save money and avoid impulse spending. Even though we're sometimes pushed around by "the power of capital," when you have your own little bit of "capital," you really do feel freer in body and mind!
 
-Some of you might be like me — not particularly fond of money,懒得理财, without grand money-making ambitions. I used to silently scoff at friends who aggressively advertised to make money.
+I don't know if there are folks like me who don't really care about money, can't be bothered to manage finances, and don't have any grand ambitions about making money. I used to see people in my social feeds frantically posting ads to make money, and while I didn't say anything, I secretly looked down on it.
 
-But honestly, everyone is just trying to support their families and pursue their dreams. As long as they follow the law and道德底线, what's wrong with working hard to make money?
+But to be honest now, everyone is working hard to support their families and pursue their dreams. As long as they follow the law and maintain moral integrity, what's wrong with working hard to make money?
 
-I hope you'll learn to**love money more** — ethically, of course. (Recommended financial启蒙书: [_Rich Dad Poor Dad_](https://book.douban.com/subject/1033778/))
+I hope that on the foundation of "integrity," you'll learn to **love money** a bit more. (Recommended financial literacy book: *[Rich Dad Poor Dad](https://book.douban.com/subject/1033778/)*)
 
-You might notice I've been using "financial independence" instead of "financial freedom." What's the difference? A simple example:
+You might have noticed that I've been using the term "financial independence" rather than "financial freedom." What's the difference? Here's a simple example:
 
-- "Financial independence" means you can support your family working 4–10 days a month
-- "Financial freedom" means you can support your family for life without working at all
+- "Financial independence" roughly means you only need to work 4–10 days a month to support your whole family
+- "Financial freedom" roughly means you can support your family for life without doing anything at all
 
-"Financial freedom" is the ultimate material pursuit — very hard to achieve, usually requiring创业 on a large scale. But "going big" essentially conflicts with being**independent**. What we're about is:
+"Financial freedom" is basically the ultimate pursuit of material life. It's very hard to achieve and usually requires entrepreneurship — building something big. But "building something big" is essentially at odds with being **independent**. What being an independent tech person is about:
 
-1. **Individualism** — working with others as**partners, not employees**
-2. Pursuing what Isaiah Berlin calls "negative liberty" — **I don't have to do what I don't want to do**
-3. Valuing family and life, loving a **broad life**, not just work work work
-4. **Making money is not the goal, just a means** — ultimately we want to do things we love, even if they don't pay
+1. **Championing individualism** — even when working with others, it's a **partnership, not an employment relationship**
+2. **Pursuing what Isaiah Berlin called "negative liberty"** — **I can choose not to do what I don't want to do**
+3. **Valuing family and life** — loving **a life with breadth**, not just work work work
+4. **Making a living is not the goal, it's just a means** — ultimately, we want to do things we love that may not be profitable
 
-"Financial freedom" is an extremely difficult goal and not a necessary condition for our ideal life. Life is short — having轻松 work,自由生活, healthy body, and完满 family is enough.
+So "financial freedom" is an extremely difficult goal, and it's not a necessary means to achieve our ideal life. We don't have to pursue "financial freedom." Life is short — having relaxed work, free living, a healthy body, and a fulfilling family is enough.
 
-But if you truly追求 "financial freedom," I suggest not taking the "independent" path. Instead, network more, climb the corporate ladder, and seek entrepreneurial opportunities.
+However, I believe many folks still dream of pursuing "financial freedom." I suggest these people don't take the "independent" path — go socialize more, climb the corporate ladder, and look for entrepreneurial opportunities instead.
 
 ## Who Has Succeeded?
 
-Speaking of successful independent tech people abroad, we have to mention Pieter Levels, founder of the famous digital nomad portal [nomadlist.com](https://nomadlist.com/). He constantly builds personal projects, writes blogs, writes books, and travels the world while working. His projects include:
+When it comes to successful independent tech persons abroad, you have to mention Pieter Levels, founder of the famous digital nomad information portal [nomadlist.com](https://nomadlist.com/). He's a freelancer constantly building personal projects, writing blogs, writing books, and traveling the world. Here are some of his projects:
 
-- nomadlist.com — finding the best cities worldwide for living and remote work
-- MAKE book — a book about starting personal projects without investment, sold 10,000+ copies
-- airlinelist.com — comparing global airlines for the cheapest, safest, most comfortable flights
-- Many more — see <https://levels.io/projects/>
+- nomadlist.com — Curates the best cities in the world for living and remote work
+- MAKE book — A book about how to start personal projects with zero investment, sold 10,000+ copies
+- airlinelist.com — Compare global airlines to find the cheapest, safest, most comfortable flights
+- And many more — check here if interested → <https://levels.io/projects/>
 
-Pieter Levels' experience shows that being "restless" might be a success密码. He even challenged himself to "[12 startups in 12 months](https://levels.io/tag/12-startups-in-12-months/)". So folks, when one project fails, try the next!
+From Pieter Levels' experience, you can see that "being restless" might just be the secret to success. He even once challenged himself to "[12 startups in 12 months](https://levels.io/tag/12-startups-in-12-months/)." So folks, when one project doesn't work out, try the next!
 
-I'm not deeply familiar with the international indie scene, but you can explore more indie products on [IndieHackers](https://www.indiehackers.com/products?sorting=highest-revenue) (some already making millions monthly)
+Unfortunately, I'm not very familiar with the international indie scene. You can check out the [IndieHackers community](https://www.indiehackers.com/products?sorting=highest-revenue) to see more indie products (some already making millions \$ a month).
 
-The domestic indie developer scene is still small, but some have gained widespread attention with their products:
+The domestic indie developer scene is still relatively small, but some individuals have launched products that gained widespread attention:
 
-- **Shudao Wang** — **极简时钟** (Minimal Clock) with millions of downloads worldwide
-- [钟颖](https://weibo.com/0x00eeee) — **JSBox** (run JS scripts on iOS) and **Pin**, selected as Apple's top 10 apps of the year (though he still works full-time)
-- [Larry](https://weibo.com/236601678) — launched 10 high-quality apps, founder of **码力全开科技工作室**
-- [李唐](https://w2solo.com/litang0908) — **钱迹** (Qianji) expense tracking app, known as the wealthiest on [w2solo](https://w2solo.com/)
+- **Minimalist Clock** by Shudao Wang — millions of downloads worldwide, a true style booster! I personally love it too
+- **JSBox** by [Zhong Ying](https://weibo.com/0x00eeee) — runs JS scripts on iOS, and **Pin** was selected as one of Apple's Top 10 Apps of the Year (but Zhong is still employed, so he might just be an indie software enthusiast rather than part of the "independent" circle)
+- [Larry](https://weibo.com/236601678) — launched 10 high-quality apps, founder of Full Power Tech Studio
+- [Li Tang](https://w2solo.com/litang0908) — his expense tracking app **[Qianji](https://www.qianjiapp.com/)** is highly profitable, and he's known as the "richest" on the most active domestic indie developer community [w2solo](https://w2solo.com/) 😉
 
-Besides indie development, there are also successful personal tech content creators, mostly done part-time:
+Beyond indie development, there are also many personal tech self-media accounts doing quite well, mostly run in spare time (all searchable on WeChat official accounts, so I won't link them):
 
-- yes 的练级攻略
-- why 技术
-- 小林 Coding
+- Yes's Leveling Guide
+- Why Tech
+- Xiaolin Coding
 
-If you know more success stories, feel free to contact me (Email: osfpu0@qq.com)
+If you know more success stories of independent tech persons, feel free to reach out (Email: osfpu0@qq.com)
 
 ## Before You Start
 
-Many people get excited about an idea and jump right in. (I used to be like that ^ ^)
+Sometimes folks get an idea and immediately jump into it full of excitement. (I used to be like that ^ ^)
 
-I suggest slowing down first. Think carefully about what kind of life you want. A simple method: list keywords, like this:
+I'd advise you to slow down first and think carefully about what kind of life you really want. A simple and useful method is to list keywords, like this:
 
-> Heavenly peace, comfort, cleanliness, free schedule, isolation, amazing accommodation, returning to nature, staying as long as you want, tasting exotic food, being close to nature,通透敏锐的感知
+> Heavenly tranquility, pleasant comfort, clean and tidy, free schedule, seclusion, amazing accommodation, returning to nature, staying as long as you like, tasting exotic cuisine, close contact with nature, clear and sharp perception
 
-Through these keywords, you can imagine your ideal life. Call it your "North Star" — during tough times, imagine your North Star, and it won't feel so hard. (Recommend Daniel Ng's [Zhihu articles](https://www.zhihu.com/people/daniel-ng-55) about his digital nomad life)
+Through keywords, you can imagine your own ideal life. I like to call this ideal life the "North Star." In all your moments of hard struggle, imagine your "North Star" — it won't feel so hard anymore. (I recommend Daniel Ng's series of [Zhihu articles](https://www.zhihu.com/people/daniel-ng-55), which tells the story of his wandering yet willing digital nomad life.)
 
-Also, mentally prepare for harsh realities. Your two-week article might get no readers. Your three-month product might fail review. You might realize after all that effort that nobody cares about your product.
+Besides that, another important thing is to mentally prepare yourself for the harshness of reality. The article you spent two weeks polishing might get zero readers. The product you spent three months developing might fail the review. You might bust your ass only to find that nobody cares about your product except your WeChat friends.
 
-The grim truth: the only unavoidable things in life are death and bullshit. Most of your indie tech journey will involve bullshit. All you can do is **persist, learn, and love**.
+To be a bit discouraging: there are only two things in life that are unavoidable — death and bullshit. And most of the time when you're an independent tech person, you'll be facing bullshit. All you can do is **persist, learn, and love**.
 
-Trust the times. Trust yourself.
+Trust this era. Trust yourself.
 
-Keep your eyes on the stars and your feet on the ground.
+Keep your eyes on the stars, and your feet on the ground.
 
-## Possible Paths
+## Paths You Can Take
 
-Though the indie community is small, there's already plenty of成熟经验. No need to explore everything yourself.
+Although the indie circle isn't big, there are already many mature experiences from predecessors — no need to figure everything out from scratch.
 
-Here are some proven directions:
+Here are some established directions for your reference:
 
-- **Indie development** — build small, differentiated products with paid features or ad revenue
-- **Tech content creation** — top personal tech accounts can make millions annually (very hard though)
-- **Online tech courses** — low barrier to entry; great content can sell tens of thousands of copies
-- **E-books** — popular abroad (free preview, paid download); harder in China due to piracy
-- **Tech consulting** — become an expert, speak at events, train others (requires deep expertise and network)
-- **Inherit a fortune** ☺
+- **Indie development** — build small but refined differentiated products, monetize through features or ads
+- **Tech self-media** — top personal tech accounts can easily reach millions in revenue (though very difficult to break into now)
+- **Online tech courses** — no prerequisites, just a computer. If the content is good, you can sell tens of thousands of copies in no time
+- **Sell e-books** — more popular overseas, usually free to read part of the content, pay to download the full book (harder to do domestically due to piracy)
+- **Tech consulting** — become a tech guru, give talks and training, it pays well (very difficult, usually requires deep technical expertise and connections)
+- **Inherit your family's billions** ☺
 
-All these paths are competitive, but if you **stick with one direction for 5+ years**, you'll likely achieve something — much easier than creating a new path from scratch.
+You might think all these paths are too competitive. But honestly, if you have the patience to **go deep in one direction for over five years**, you have a good chance of achieving something — much easier than blazing a completely new trail.
 
-IndieHackers offers a valuable "6-step success" framework:
+The IndieHackers community offers a valuable "6-step success roadmap":
 
-1. **Clarify your life goal** — your "North Star." What does your ideal life look like?
-2. **Find potential partners** (optional). Partners, not employees/bosses/investors. A good partner complements your skills and keeps you motivated!
+1. **Define your life goals** — the "North Star" from the previous section. What does your ideal life look like? What kind of success do you envision? What journey would you truly enjoy?
+2. **Find potential partners** — optional. Note: partners, not employees/bosses/investors. A good partner can complement your skill set and keep you motivated!
 3. **Come up with a good idea** 😁
-4. **Build your MVP**. Don't be a perfectionist — just make it work!
-5. **Find your first customer**. The goal is feedback — iterate before the official launch
-6. **Launch! Keep iterating!**
+4. **Build your Minimum Viable Product (MVP)** — don't be a perfectionist! Just make it work!
+5. **Find your first customer** — the main goal is feedback. Iterate the product before shipping the first version
+6. **Launch! Iterate continuously!**
 
 ## Your Superpowers
 
-Being an independent tech person requires diverse skills. Here are some crucial ones to cultivate — even if you never go indie, they'll serve you well:
+Being an independent tech person is actually very hard — it requires a diverse set of skills. This section summarizes some abilities I consider essential. If you're still employed, I recommend deliberately cultivating these skills. Even if you never end up on the independent tech path, they'll greatly benefit your life.
 
-1. **Tech skills — your ULTIMATE superpower.** Technology is our foundation. Never abandon it. Learning more tech isn't always about using it — it improves your technical judgment. Without solid skills, you might become a good "independent money-maker" but never a good "independent tech person." Pragmatically: learn frontend and backend — HTML, CSS, JS, Vue, React, Swift, Android, Java, Spring, MySQL, Docker, Nginx, and so on 🤣. Philosophically: slowly read CSAPP, SICP, CLRS.
-2. **Learning ability.** Once independent, you'll find yourself learning everything — tech, product, marketing, writing, English! Good learning ability lets you efficiently acquire knowledge and build projects faster. Bilibili has many excellent study content creators — learn how to learn!
-3. **Mental strength.** My coined term. The indie tech path is lonely — you need dialectical thinking, non-attachment, and resilience. When your mind is strong, the future becomes clearer. I recommend reading Feng Tang and Li Ao for their mindset. Also explore philosophy — many of life's problems have been thoughtfully addressed by philosophers. Recommended: Schopenhauer's [_The Wisdom of Life_](https://book.douban.com/subject/25867570/) and Russell's [_The Conquest of Happiness_](https://book.douban.com/subject/3633588/).
-4. **Time management.** Without bosses or deadlines pushing you, time management becomes critical. Besides your "North Star" for motivation, practical techniques are essential. Beyond [GTD](https://www.mifengtd.cn/articles/start-gtd.html) and the [Pomodoro Technique](https://wiki.mbalib.com/wiki/%E7%95%AA%E8%8C%84%E5%B7%A5%E4%BD%9C%E6%B3%95), I recommend Brian Tracy's [_Eat That Frog!_](https://book.douban.com/subject/27130739/) and Ji Yuan's [_There's No Such Thing as No Time_](https://book.douban.com/subject/26628237/).
+1. **Technical skills are extremely important — your ultimate superpower.** Technology is our foundation. No matter what, never let it go. Learning more technologies isn't always about using them — it's about improving your technical judgment. Without solid technical skills, you might end up a good "independent money-maker," but certainly not a good "independent tech person." On the practical side, learn frontend and backend knowledge like HTML, CSS, JS, VUE, REACT, SWIFT, Android, JAVA, SPRING, MYSQL, Docker, NGINX, and so on — the list goes on forever 🤣. On the theoretical side, slowly savor CSAPP, SICP, CLRS.
+2. **Learning ability.** Once you embark on the independent tech path, you'll find there's so much to learn! Tech, product, marketing, writing, English — you name it! Only with good learning ability can you efficiently master more knowledge and build your projects faster. Bilibili has many excellent study content creators — let's learn how to learn from them!
+3. **Mental strength.** Another term I coined. The independent tech path is often a lonely journey. You need a dialectical mindset, a non-worrying mindset, and a non-slacking mindset. When your mind is strong, the future gradually becomes clearer. I think contemporary writer Feng Tang and Chinese classics master Li Ao both have great mindsets — I recommend reading their books. Also look into philosophy — many of life's problems and worries have been thought through by philosophers, who've given quite convincing answers. I recommend two books on life and happiness written by philosophers: Schopenhauer's *[The Wisdom of Life](https://book.douban.com/subject/25867570/)* and Bertrand Russell's *[The Conquest of Happiness](https://book.douban.com/subject/3633588/)*.
+4. **Time management ability.** When there's no boss's commands or project deadlines pushing you, time management becomes crucial. Besides the "North Star" giving you energy, some time management techniques are essential tools. Beyond the common [GTD (Getting Things Done)](https://www.mifengtd.cn/articles/start-gtd.html) and [Pomodoro Technique](https://wiki.mbalib.com/wiki/%E7%95%AA%E8%8C%84%E5%B7%A5%E4%BD%9C%E6%B3%95), I also recommend two books: Brian Tracy's *[Eat That Frog!](https://book.douban.com/subject/27130739/)* and Ji Yuan's *[There's No Such Thing as No Time](https://book.douban.com/subject/26628237/)*.
 
-## Where to Find the Tribe
+## Where Are the Veterans?
 
-Two notable communities:
+I'll only recommend two well-known communities:
 
-1. International: [indiehackers.com](https://www.indiehackers.com/) — great content, English required
-2. Chinese: [w2solo.com](https://w2solo.com/) — less active than IndieHackers, but the most established domestic community. Join and help grow the Chinese indie scene!
+1. International: [indiehackers.com](https://www.indiehackers.com/) — plenty of quality content, but you need to know English
+2. Domestic: [w2solo.com](https://w2solo.com/) — not as active as IndieHackers, but already the most established community in China. Everyone should post more to help grow the domestic indie circle!
 
 ## About Me
 
-This article explores one possibility for my career development. Let me introduce myself — hope to connect with like-minded people!
+This article explores one possibility for my career development, so let me introduce myself at the end. I hope to connect with like-minded friends, even if just as a nodding acquaintance!
 
-- Passionate about technology and reading, pursuing a **lifelong learning** attitude
-- Love everything **beautiful**, in awe of the design profession
-- Recently into humanities books, hoping to step out of Plato's "cave" and find my own **spiritual freedom**
+- I love studying technology and reading books, pursuing a **"lifelong learning"** attitude and long-term belief
+- I'm passionate about everything **beautiful**, and I deeply admire the design industry
+- Lately, I've been reading humanities books, hoping to step out of Plato's "cave" and find my own **spiritual freedom**
 
-Lastly, never forget that **happiness** is our ultimate goal — nothing else matters. If you feel happy going to work, starting a business, being single, or staying home — protect your own path to happiness. **"Independence" is not a prerequisite for happiness — a healthy body and mind are.**
+One final thought: no matter what, never forget that **happiness** is our ultimate goal — nothing else. If you feel happy going to work every day seeing your colleagues, happy being an entrepreneur, happy being single, happy staying at home and not going out — by all means, protect your own path to happiness. **"Independence" is not a prerequisite for "happiness" — a healthy body and mind are.**

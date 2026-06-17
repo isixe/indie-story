@@ -17,4 +17,5 @@ A curated collection of real indie developer stories and practical guides.
 
 ### Guides
 
+- [Link Preview Meta Tags](https://indiestory.itea.dev/en/post/link-preview-meta-tags)
 - [The Independent Tech Person Guide](https://indiestory.itea.dev/en/post/solo-tech-guide)

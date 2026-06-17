@@ -17,6 +17,7 @@
 
 ### 指南
 
+- [链接预览元标签](https://indiestory.itea.dev/zh/post/link-preview-meta-tags)
 - [独立技术人指南](https://indiestory.itea.dev/zh/post/solo-tech-guide)
 
 ---

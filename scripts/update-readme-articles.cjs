@@ -19,7 +19,7 @@ const README_ZH = path.join(ROOT, 'README-ZH.md');
 
 // ── Frontmatter parser (no dependencies) ──────────────────────────
 function parseFrontmatter(content) {
-  const m = content.match(/^---\n([\s\S]*?)\n---\n/);
+  const m = content.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n/);
   if (!m) return null;
   const fm = {};
   for (const line of m[1].split('\n')) {

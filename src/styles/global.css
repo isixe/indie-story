@@ -32,6 +32,15 @@
 	--content-padding: var(--space-md);
 }
 
+@media (max-width: 480px) {
+	:root {
+		--content-padding: var(--space-sm);
+		--space-xl: 24px;
+		--space-2xl: 32px;
+		--space-3xl: 48px;
+	}
+}
+
 @media (min-width: 640px) {
 	:root {
 		--content-padding: var(--space-lg);

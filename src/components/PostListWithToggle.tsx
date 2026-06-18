@@ -104,16 +104,9 @@ export default function PostListWithToggle({
           </div>
         </div>
         <div className="lg:grid lg:grid-cols-2 lg:gap-x-12">
-          <div>
-            {posts.filter((_, i) => i % 2 === 0).map((post) => (
-              <PostItem key={post.slug} post={post} locale={locale} lang={lang} />
-            ))}
-          </div>
-          <div>
-            {posts.filter((_, i) => i % 2 === 1).map((post) => (
-              <PostItem key={post.slug} post={post} locale={locale} lang={lang} />
-            ))}
-          </div>
+          {posts.map((post) => (
+            <PostItem key={post.slug} post={post} locale={locale} lang={lang} />
+          ))}
         </div>
       </section>
     );
@@ -131,7 +124,7 @@ export default function PostListWithToggle({
               {t(lang, 'page', { current: currentPage, total: totalPages })}
             </span>
           )}
-          <div className="flex items-center gap-1 rounded" style={{backgroundColor: 'var(--color-surface-subtle)'}}>
+          <div className="hidden sm:flex items-center gap-1 rounded" style={{backgroundColor: 'var(--color-surface-subtle)'}}>
             <button
               onClick={() => setIsTwoColumn(true)}
               className={`p-1.5 transition-colors ${
@@ -160,16 +153,9 @@ export default function PostListWithToggle({
 
       {isTwoColumn ? (
         <div className="lg:grid lg:grid-cols-2 lg:gap-x-12">
-          <div>
-            {posts.filter((_, i) => i % 2 === 0).map((post) => (
-              <PostItem key={post.slug} post={post} locale={locale} lang={lang} />
-            ))}
-          </div>
-          <div>
-            {posts.filter((_, i) => i % 2 === 1).map((post) => (
-              <PostItem key={post.slug} post={post} locale={locale} lang={lang} />
-            ))}
-          </div>
+          {posts.map((post) => (
+            <PostItem key={post.slug} post={post} locale={locale} lang={lang} />
+          ))}
         </div>
       ) : (
         <div className="w-full">

@@ -35,15 +35,8 @@ const lang = Astro.props.lang || getLangFromPath(Astro.url.pathname);
   </div>
   
   <div class="lg:grid lg:grid-cols-2 lg:gap-x-12" style="--divider-color: var(--color-border);">
-    <div>
-      {posts.filter((_, i) => i % 2 === 0).map((post) => (
-        <PostItem post={post} lang={lang} />
-      ))}
-    </div>
-    <div>
-      {posts.filter((_, i) => i % 2 === 1).map((post) => (
-        <PostItem post={post} lang={lang} />
-      ))}
-    </div>
+    {posts.map((post) => (
+      <PostItem post={post} lang={lang} />
+    ))}
   </div>
 </section>

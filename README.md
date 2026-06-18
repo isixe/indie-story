@@ -18,5 +18,6 @@ A curated collection of real indie developer stories and practical guides.
 ### Guides
 
 - [Link Preview Meta Tags](https://indiestory.itea.dev/en/post/link-preview-meta-tags)
+- [Don't build your castle in other people's kingdoms](https://indiestory.itea.dev/en/post/dont-build-your-castle)
 - [The Independent Tech Person Guide](https://indiestory.itea.dev/en/post/solo-tech-guide)
 - [Semantic Versioning 2.0.0](https://indiestory.itea.dev/en/post/semantic-versioning-2-0-0)

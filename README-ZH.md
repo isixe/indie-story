@@ -18,6 +18,7 @@
 ### 指南
 
 - [链接预览元标签](https://indiestory.itea.dev/zh/post/link-preview-meta-tags)
+- [不要在别人的领地上建造你的城堡](https://indiestory.itea.dev/zh/post/dont-build-your-castle)
 - [独立技术人指南](https://indiestory.itea.dev/zh/post/solo-tech-guide)
 - [语义化版本 2.0.0](https://indiestory.itea.dev/zh/post/semantic-versioning-2-0-0)
 

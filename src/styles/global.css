@@ -287,6 +287,21 @@ html {
 	padding: 0;
 }
 
+.article-content a {
+	color: var(--color-accent);
+	text-decoration: underline;
+	text-underline-offset: 2px;
+	text-decoration-color: rgba(58, 90, 58, 0.3);
+	transition:
+		color 0.2s ease,
+		text-decoration-color 0.2s ease;
+}
+
+.article-content a:hover {
+	color: #2d4a2d;
+	text-decoration-color: #2d4a2d;
+}
+
 .article-content hr {
 	border: none;
 	border-top: 1px solid var(--color-border);

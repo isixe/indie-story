@@ -17,6 +17,8 @@ A curated collection of real indie developer stories and practical guides.
 
 ### Guides
 
+- [What Are Backlinks in SEO? Everything You Need to Know](https://indiestory.itea.dev/en/post/what-are-backlinks)
+- [Cognitive load is what matters](https://indiestory.itea.dev/en/post/cognitive-load-is-what-matters)
 - [Link Preview Meta Tags](https://indiestory.itea.dev/en/post/link-preview-meta-tags)
 - [Don't build your castle in other people's kingdoms](https://indiestory.itea.dev/en/post/dont-build-your-castle)
 - [The Independent Tech Person Guide](https://indiestory.itea.dev/en/post/solo-tech-guide)

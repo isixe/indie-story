@@ -17,6 +17,8 @@
 
 ### 指南
 
+- [SEO中的反向链接是什么？你需要知道的一切](https://indiestory.itea.dev/zh/post/what-are-backlinks)
+- [认知负荷才是关键](https://indiestory.itea.dev/zh/post/cognitive-load-is-what-matters)
 - [链接预览元标签](https://indiestory.itea.dev/zh/post/link-preview-meta-tags)
 - [不要在别人的领地上建造你的城堡](https://indiestory.itea.dev/zh/post/dont-build-your-castle)
 - [独立技术人指南](https://indiestory.itea.dev/zh/post/solo-tech-guide)

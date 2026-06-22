@@ -7,6 +7,15 @@ interface Props {
 
 const currentYear = new Date().getFullYear();
 const lang = Astro.props.lang || getLangFromPath(Astro.url.pathname);
+
+const currentPath = Astro.url.pathname;
+const isStories = /^\/(?:zh\/|en\/)?stories(?:\/|$)/.test(currentPath);
+const isGuides = /^\/(?:zh\/|en\/)?guides(?:\/|$)/.test(currentPath);
+const rssPath = isStories
+  ? `${lang}/stories/rss.xml`
+  : isGuides
+    ? `${lang}/guides/rss.xml`
+    : `${lang}/rss.xml`;
 ---
 
 <footer style="margin-top: var(--space-3xl); padding-top: var(--space-xl);">
@@ -16,7 +25,7 @@ const lang = Astro.props.lang || getLangFromPath(Astro.url.pathname);
     </p>
     <div class="flex items-center gap-4">
       <a
-        href={`/${lang}/rss.xml`}
+        href={`/${rssPath}`}
         class="font-sans text-xs text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-colors"
         target="_blank"
         rel="noopener noreferrer"

@@ -70,6 +70,10 @@ export const zh = {
   contentLoading: '文章内容加载中...',
   onThisPage: '本页目录',
 
+  // Reprint notice
+  reprintPrefix: '本文转载自 ',
+  reprintSuffix: '，版权归原作者所有。本站仅为转载，仅供学习和交流。',
+
   // Post list
   page: 'Page {current} / {total}',
 

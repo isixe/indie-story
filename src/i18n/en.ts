@@ -70,6 +70,10 @@ export const en = {
   contentLoading: 'Loading content...',
   onThisPage: 'On This Page',
 
+  // Reprint notice
+  reprintPrefix: 'This article is reprinted from ',
+  reprintSuffix: '. All rights belong to the original author. This site is for republishing purposes only, for learning and exchange.',
+
   // Post list
   page: 'Page {current} / {total}',
 

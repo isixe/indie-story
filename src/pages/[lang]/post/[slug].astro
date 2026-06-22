@@ -129,8 +129,25 @@ if (!post) {
 						)}
 					</div>
 
+					{/* Reprint notice */}
+					{originUrl && (
+						<div
+							style="margin-top: var(--space-3xl); padding: var(--space-lg); background-color: var(--color-surface-subtle); border-left: 3px solid var(--color-border);"
+							class="font-sans text-sm text-[var(--color-text-muted)] leading-relaxed">
+							{t(lang, "reprintPrefix")}
+							<a
+								href={originUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="text-[var(--color-text)] hover:text-[var(--color-hover)] underline transition-colors">
+								{originHostname || originUrl}
+							</a>
+							{t(lang, "reprintSuffix")}
+						</div>
+					)}
+
 					{/* Post footer */}
-					<footer style="margin-top: var(--space-3xl); padding-top: var(--space-2xl);">
+					<footer style="margin-top: var(--space-2xl); padding-top: var(--space-2xl);">
 						<a
 							href={`/${lang}/`}
 							class="inline-flex items-center gap-2 font-sans text-sm text-[var(--color-text-muted)] hover:text-[var(--color-hover)] transition-colors group">

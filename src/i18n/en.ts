@@ -82,6 +82,7 @@ export const en = {
   // Post list layout toggle
   gridView: 'Grid view',
   listView: 'List view',
+  timelineView: 'Timeline view',
 
   // Search
   search: 'Search',

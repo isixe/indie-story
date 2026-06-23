@@ -82,6 +82,7 @@ export const zh = {
   // Post list layout toggle
   gridView: '双列视图',
   listView: '单列视图',
+  timelineView: '时间线视图',
 
   // Search
   search: '搜索',

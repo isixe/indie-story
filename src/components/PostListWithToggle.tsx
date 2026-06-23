@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { LayoutGrid, List } from 'lucide-react';
+import { LayoutGrid, List, Waypoints } from 'lucide-react';
 import { t, type Lang } from '../i18n';
 import type { Post } from '../utils/posts';
 
@@ -12,7 +12,9 @@ interface PostListWithToggleProps {
   lang?: Lang;
 }
 
-function PostItem({ post, locale, lang }: { post: Post; locale: string; lang: Lang }) {
+type ViewMode = 'two' | 'one' | 'timeline';
+
+function PostItem({ post, locale, lang, timeOnLeft }: { post: Post; locale: string; lang: Lang; timeOnLeft?: boolean }) {
   const [hovered, setHovered] = useState(false);
   const formatDateTime = (date: Date) => {
     return date.toLocaleString(locale, {
@@ -40,13 +42,13 @@ function PostItem({ post, locale, lang }: { post: Post; locale: string; lang: La
         onMouseLeave={() => setHovered(false)}
       >
         <div className="flex flex-col gap-1">
-          <div className="flex items-baseline justify-between gap-4">
+          <div className={`flex items-baseline ${timeOnLeft ? 'flex-row-reverse' : ''} justify-between gap-4`}>
             <div className="flex-1 min-w-0">
-              <p className="font-sans text-[10px] sm:text-xs text-[var(--color-text-light)] uppercase tracking-wide mb-1 truncate">
+              <p className={`font-sans text-[10px] sm:text-xs text-[var(--color-text-light)] uppercase tracking-wide mb-1 truncate ${timeOnLeft ? 'text-right' : ''}`}>
                 {post.blogName}
               </p>
               <h3
-                className="font-serif text-sm sm:text-base transition-colors duration-200 leading-snug"
+                className={`font-serif text-sm sm:text-base transition-colors duration-200 leading-snug ${timeOnLeft ? 'text-right' : ''}`}
                 style={{color: hovered ? 'var(--color-hover)' : 'var(--color-text)'}}
               >
                 {post.title}
@@ -62,6 +64,27 @@ function PostItem({ post, locale, lang }: { post: Post; locale: string; lang: La
   );
 }
 
+interface YearMonthGroup {
+  year: number;
+  month: number;
+  posts: Post[];
+}
+
+function groupPostsByYearMonth(posts: Post[]): YearMonthGroup[] {
+  const groups: YearMonthGroup[] = [];
+  for (const post of posts) {
+    const year = post.publishDate.getFullYear();
+    const month = post.publishDate.getMonth() + 1;
+    const lastGroup = groups[groups.length - 1];
+    if (lastGroup && lastGroup.year === year && lastGroup.month === month) {
+      lastGroup.posts.push(post);
+    } else {
+      groups.push({ year, month, posts: [post] });
+    }
+  }
+  return groups;
+}
+
 export default function PostListWithToggle({
   posts,
   title = 'Latest Updates',
@@ -70,23 +93,29 @@ export default function PostListWithToggle({
   totalPages = 1,
   lang = 'zh'
 }: PostListWithToggleProps) {
-  const [isTwoColumn, setIsTwoColumn] = useState(true);
+  const [viewMode, setViewMode] = useState<ViewMode>('two');
   const [mounted, setMounted] = useState(false);
   const locale = lang === 'zh' ? 'zh-CN' : 'en-US';
 
   useEffect(() => {
     setMounted(true);
     const saved = localStorage.getItem('postListLayout');
-    if (saved !== null) {
-      setIsTwoColumn(saved === 'two');
+    if (saved !== null && ['two', 'one', 'timeline'].includes(saved)) {
+      setViewMode(saved as ViewMode);
     }
   }, []);
 
-  const toggleLayout = () => {
-    const newValue = !isTwoColumn;
-    setIsTwoColumn(newValue);
-    localStorage.setItem('postListLayout', newValue ? 'two' : 'one');
+  const toggleView = (mode: ViewMode) => {
+    setViewMode(mode);
+    localStorage.setItem('postListLayout', mode);
   };
+
+  const toggleBtnClass = (mode: ViewMode) =>
+    `p-1.5 transition-colors ${
+      viewMode === mode
+        ? 'bg-[var(--color-text)] text-[var(--color-bg)]'
+        : 'text-[var(--color-text-muted)] hover:text-[var(--color-hover)]'
+    }`;
 
   if (!mounted) {
     return (
@@ -112,6 +141,102 @@ export default function PostListWithToggle({
     );
   }
 
+  const renderTimeline = () => {
+    const groups = groupPostsByYearMonth(posts);
+    let postIndex = 0;
+
+    const monthLabel = (year: number, month: number) => {
+      if (locale === 'zh-CN') {
+        return `${year} 年 ${month} 月`;
+      }
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      return `${months[month - 1]} ${year}`;
+    };
+
+    return (
+      <div className="relative">
+        <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-[var(--color-border)] -translate-x-1/2" />
+
+        {groups.map((group) => (
+          <div key={`${group.year}-${group.month}`}>
+            <div className="relative z-10 flex justify-center mb-6 mt-10 first:mt-0">
+              <span
+                className="px-4 py-1.5 text-xs font-sans tracking-wide rounded-full border"
+                style={{
+                  backgroundColor: 'var(--color-bg)',
+                  color: 'var(--color-text-muted)',
+                  borderColor: 'var(--color-border)',
+                }}
+              >
+                {monthLabel(group.year, group.month)}
+              </span>
+            </div>
+
+            {group.posts.map((post) => {
+              const isLeft = postIndex % 2 === 0;
+              postIndex++;
+              return (
+                <div key={post.slug} className="relative mb-6 lg:mb-8 last:mb-0">
+                    <div className="hidden lg:grid lg:grid-cols-[1fr_2rem_1fr] lg:items-start">
+                      {isLeft ? (
+                        <>
+                          <div className="pr-8">
+                            <PostItem post={post} locale={locale} lang={lang} timeOnLeft={false} />
+                          </div>
+                          <div className="flex justify-center relative z-10 pt-[1.4rem]">
+                            <div
+                              className="w-3 h-3 rounded-full border-2"
+                              style={{
+                                borderColor: 'var(--color-accent)',
+                                backgroundColor: 'var(--color-bg)',
+                              }}
+                            />
+                          </div>
+                          <div />
+                        </>
+                      ) : (
+                        <>
+                          <div />
+                          <div className="flex justify-center relative z-10 pt-[1.4rem]">
+                            <div
+                              className="w-3 h-3 rounded-full border-2"
+                              style={{
+                                borderColor: 'var(--color-accent)',
+                                backgroundColor: 'var(--color-bg)',
+                              }}
+                            />
+                          </div>
+                          <div className="pl-8">
+                            <PostItem post={post} locale={locale} lang={lang} timeOnLeft={true} />
+                          </div>
+                        </>
+                      )}
+                    </div>
+
+                  <div className="lg:hidden flex items-stretch gap-3 pl-3">
+                    <div className="relative flex flex-col items-center pt-[1.4rem]">
+                      <div className="absolute top-0 bottom-0 w-px bg-[var(--color-border)] left-1/2 -translate-x-1/2" />
+                      <div
+                        className="w-2.5 h-2.5 rounded-full border-2 relative z-10"
+                        style={{
+                          borderColor: 'var(--color-accent)',
+                          backgroundColor: 'var(--color-bg)',
+                        }}
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <PostItem post={post} locale={locale} lang={lang} />
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <section className="w-full">
       <div className="flex items-center justify-between" style={{marginBottom: 'var(--space-md)'}}>
@@ -126,43 +251,44 @@ export default function PostListWithToggle({
           )}
           <div className="hidden sm:flex items-center gap-1 rounded" style={{backgroundColor: 'var(--color-surface-subtle)'}}>
             <button
-              onClick={() => setIsTwoColumn(true)}
-              className={`p-1.5 transition-colors ${
-                isTwoColumn
-                  ? 'bg-[var(--color-text)] text-[var(--color-bg)]'
-                  : 'text-[var(--color-text-muted)] hover:text-[var(--color-hover)]'
-              }`}
+              onClick={() => toggleView('two')}
+              className={toggleBtnClass('two')}
               title={t(lang, 'gridView')}
             >
               <LayoutGrid size={14} />
             </button>
             <button
-              onClick={() => setIsTwoColumn(false)}
-              className={`p-1.5 transition-colors ${
-                !isTwoColumn
-                  ? 'bg-[var(--color-text)] text-[var(--color-bg)]'
-                  : 'text-[var(--color-text-muted)] hover:text-[var(--color-hover)]'
-              }`}
+              onClick={() => toggleView('one')}
+              className={toggleBtnClass('one')}
               title={t(lang, 'listView')}
             >
               <List size={14} />
+            </button>
+            <button
+              onClick={() => toggleView('timeline')}
+              className={toggleBtnClass('timeline')}
+              title={t(lang, 'timelineView')}
+            >
+              <Waypoints size={14} />
             </button>
           </div>
         </div>
       </div>
 
-      {isTwoColumn ? (
+      {viewMode === 'two' ? (
         <div className="lg:grid lg:grid-cols-2 lg:gap-x-12">
           {posts.map((post) => (
             <PostItem key={post.slug} post={post} locale={locale} lang={lang} />
           ))}
         </div>
-      ) : (
+      ) : viewMode === 'one' ? (
         <div className="w-full">
           {posts.map((post) => (
             <PostItem key={post.slug} post={post} locale={locale} lang={lang} />
           ))}
         </div>
+      ) : (
+        renderTimeline()
       )}
     </section>
   );

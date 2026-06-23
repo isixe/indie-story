@@ -83,6 +83,11 @@ export const en = {
   gridView: 'Grid view',
   listView: 'List view',
 
+  // Search
+  search: 'Search',
+  searchPlaceholder: 'Search articles, content, tags...',
+  searchNoResults: 'No articles found',
+
   // Sub pages
   storiesPage: 'Indie Developer Stories - Page {page} - Indie Story',
 } as const;

@@ -36,7 +36,7 @@ const isActive = (href: string) => {
         <a href={prefix || '/'}>Indie Story</a>
       </h1>
     </div>
-    <nav>
+    <nav class="flex items-center gap-6 sm:gap-8">
       <ul class="flex flex-wrap gap-6 sm:gap-8">
         {navItems.map((item) => {
           const fullHref = item.href === '/' ? (prefix || '/') : `${prefix}${item.href}`;

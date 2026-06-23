@@ -83,6 +83,11 @@ export const zh = {
   gridView: '双列视图',
   listView: '单列视图',
 
+  // Search
+  search: '搜索',
+  searchPlaceholder: '搜索文章标题、内容、标签...',
+  searchNoResults: '没有找到相关文章',
+
   // Sub pages
   storiesPage: '独立开发者故事 - 第{page}页 - Indie Story',
 } as const;

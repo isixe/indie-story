@@ -64,6 +64,8 @@ export const zh = {
   // Post detail
   backToList: '返回列表',
   backToArticleList: '返回文章列表',
+  prevArticle: '上一篇',
+  nextArticle: '下一篇',
   categoryStory: '故事',
   categoryGuide: '指南',
   origin: '原文',

@@ -105,6 +105,23 @@ export function getPostBySlug(slug: string, lang?: string): Post | undefined {
   return posts.find((post) => post.slug === slug && (!lang || post.lang === lang));
 }
 
+export function getAdjacentPosts(
+  slug: string,
+  lang: string,
+  category: 'story' | 'guide'
+): { prev: Post | null; next: Post | null } {
+  const categoryPosts = getPostsByCategory(category, lang);
+  const currentIndex = categoryPosts.findIndex((p) => p.slug === slug);
+  if (currentIndex === -1) return { prev: null, next: null };
+
+  // categoryPosts is sorted descending by publishDate (newest first)
+  // prev = older (index+1), next = newer (index-1)
+  return {
+    prev: currentIndex < categoryPosts.length - 1 ? categoryPosts[currentIndex + 1] : null,
+    next: currentIndex > 0 ? categoryPosts[currentIndex - 1] : null,
+  };
+}
+
 export function getPostsByPage(
   page: number,
   pageSize: number = 20

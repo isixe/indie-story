@@ -64,6 +64,8 @@ export const en = {
   // Post detail
   backToList: 'Back to List',
   backToArticleList: 'Back to Articles',
+  prevArticle: 'Previous',
+  nextArticle: 'Next',
   categoryStory: 'Story',
   categoryGuide: 'Guide',
   origin: 'Original',

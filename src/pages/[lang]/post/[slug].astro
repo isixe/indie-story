@@ -1,7 +1,7 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
-import { getPostBySlug, getPostsByLang, formatDateTime, renderMarkdown, extractHeadings } from "../../../utils/posts";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { getPostBySlug, getPostsByLang, getAdjacentPosts, formatDateTime, renderMarkdown, extractHeadings } from "../../../utils/posts";
+import { ArrowLeft, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { t, type Lang } from "../../../i18n";
 
 export function getStaticPaths() {
@@ -23,6 +23,8 @@ let renderedContent = "";
 let headings: { level: number; text: string; slug: string }[] = [];
 let originUrl = "";
 let originHostname = "";
+let prevPost: { slug: string; title: string } | null = null;
+let nextPost: { slug: string; title: string } | null = null;
 
 if (!post) {
 	Astro.response.status = 404;
@@ -40,6 +42,9 @@ if (!post) {
 				}
 			})()
 		: "";
+	const adjacent = getAdjacentPosts(slug, lang, post.category);
+	prevPost = adjacent.prev ? { slug: adjacent.prev.slug, title: adjacent.prev.title } : null;
+	nextPost = adjacent.next ? { slug: adjacent.next.slug, title: adjacent.next.title } : null;
 }
 ---
 
@@ -144,6 +149,46 @@ if (!post) {
 							</a>
 							{t(lang, "reprintSuffix")}
 						</div>
+					)}
+
+					{/* Prev / Next navigation */}
+					{(prevPost || nextPost) && (
+						<nav
+							class="prev-next-nav"
+							style="margin-top: var(--space-3xl); padding-top: var(--space-lg); border-top: 1px solid var(--color-border); display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg);">
+							{prevPost ? (
+								<a
+									href={`/${lang}/post/${prevPost.slug}`}
+									class="group flex flex-col gap-1 font-sans text-sm no-underline hover:no-underline"
+									style="text-align: left;">
+									<span class="inline-flex items-center gap-1 text-[var(--color-text-muted)] text-xs">
+										<ChevronLeft size={14} class="group-hover:-translate-x-1 transition-transform" />
+										{t(lang, "prevArticle")}
+									</span>
+									<span class="text-[var(--color-text)] hover:text-[var(--color-hover)] transition-colors line-clamp-2">
+										{prevPost.title}
+									</span>
+								</a>
+							) : (
+								<div />
+							)}
+							{nextPost ? (
+								<a
+									href={`/${lang}/post/${nextPost.slug}`}
+									class="group flex flex-col gap-1 font-sans text-sm no-underline hover:no-underline"
+									style="text-align: right;">
+									<span class="inline-flex items-center gap-1 justify-end text-[var(--color-text-muted)] text-xs">
+										{t(lang, "nextArticle")}
+										<ChevronRight size={14} class="group-hover:translate-x-1 transition-transform" />
+									</span>
+									<span class="text-[var(--color-text)] hover:text-[var(--color-hover)] transition-colors line-clamp-2">
+										{nextPost.title}
+									</span>
+								</a>
+							) : (
+								<div />
+							)}
+						</nav>
 					)}
 
 					{/* Post footer */}

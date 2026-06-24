@@ -70,7 +70,7 @@ async function getShikiHighlighter(): Promise<Highlighter> {
   if (_highlighter) return _highlighter;
   if (!_highlighterPromise) {
     _highlighterPromise = createHighlighter({
-      themes: ['github-dark-dimmed'],
+      themes: ['one-dark-pro'],
       langs: [
         'javascript', 'typescript', 'jsx', 'tsx',
         'python', 'bash', 'sh', 'shell', 'zsh',
@@ -115,9 +115,9 @@ export async function renderMarkdown(content: string): Promise<string> {
       const decoded = decodeHtmlEntities(code);
       const language = lang || 'plaintext';
       try {
-        return hl.codeToHtml(decoded, { lang: language, theme: 'github-dark-dimmed' });
+        return hl.codeToHtml(decoded, { lang: language, theme: 'one-dark-pro' });
       } catch {
-        return hl.codeToHtml(decoded, { lang: 'plaintext', theme: 'github-dark-dimmed' });
+        return hl.codeToHtml(decoded, { lang: 'plaintext', theme: 'one-dark-pro' });
       }
     },
   );

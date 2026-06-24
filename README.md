@@ -17,6 +17,7 @@ A curated collection of real indie developer stories and practical guides.
 - [A Self-Narrative of an Indie Developer (We All Have Dreams)](https://indiestory.itea.dev/en/post/indie-dev-self-narrative)
 - [Six Months as a Full-Time Indie Hacker](https://indiestory.itea.dev/en/post/axiaoxin-indiehacker-6month)
 - [Understanding Indie Development](https://indiestory.itea.dev/en/post/understanding-indie-development)
+- [My solopreneur story: zero to $45K/mo in 2 years](https://indiestory.itea.dev/en/post/tony-dinh-zero-to-45kmo)
 
 ### Guides
 
@@ -26,5 +27,7 @@ A curated collection of real indie developer stories and practical guides.
 - [Link Preview Meta Tags](https://indiestory.itea.dev/en/post/link-preview-meta-tags)
 - [What Is Survivorship Bias? A 4400-Word Explanation](https://indiestory.itea.dev/en/post/survivorship-bias)
 - [Don't build your castle in other people's kingdoms](https://indiestory.itea.dev/en/post/dont-build-your-castle)
+- [Internet Advertising (Part 5): Common Advertising Billing Models — What''s the Difference Between CPM and eCPM?](https://indiestory.itea.dev/en/post/internet-advertising-5)
 - [The Independent Tech Person Guide](https://indiestory.itea.dev/en/post/solo-tech-guide)
+- [Product Psychology 011 | Creating a Conformity Environment to Drive Purchase Impulse](https://indiestory.itea.dev/en/post/product-psychology-conformity)
 - [Semantic Versioning 2.0.0](https://indiestory.itea.dev/en/post/semantic-versioning-2-0-0)

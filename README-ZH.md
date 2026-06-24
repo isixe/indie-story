@@ -17,6 +17,7 @@
 - [一名独立开发者的自述（我们都是有梦想的人）](https://indiestory.itea.dev/zh/post/indie-dev-self-narrative)
 - [全职独立开发半年小记](https://indiestory.itea.dev/zh/post/axiaoxin-indiehacker-6month)
 - [认识独立开发这件事儿](https://indiestory.itea.dev/zh/post/understanding-indie-development)
+- [我的独立创业故事：从零到月入 4.5 万美元的两年历程](https://indiestory.itea.dev/zh/post/tony-dinh-zero-to-45kmo)
 
 ### 指南
 
@@ -26,7 +27,9 @@
 - [链接预览元标签](https://indiestory.itea.dev/zh/post/link-preview-meta-tags)
 - [4400字！说明白什么是「幸存者偏差」？](https://indiestory.itea.dev/zh/post/survivorship-bias)
 - [不要在别人的领地上建造你的城堡](https://indiestory.itea.dev/zh/post/dont-build-your-castle)
+- [互联网广告（五）：常见的广告计费模式有哪些？CPM和eCPM有什么不同？](https://indiestory.itea.dev/zh/post/internet-advertising-5)
 - [独立技术人指南](https://indiestory.itea.dev/zh/post/solo-tech-guide)
+- [产品心理学011 | 营造从众环境，让用户产生购买冲动](https://indiestory.itea.dev/zh/post/product-psychology-conformity)
 - [语义化版本 2.0.0](https://indiestory.itea.dev/zh/post/semantic-versioning-2-0-0)
 
 ---

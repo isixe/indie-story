@@ -30,7 +30,7 @@ if (!post) {
 	Astro.response.status = 404;
 } else {
 	dateStr = formatDateTime(post.publishDate, lang === "en" ? "en-US" : "zh-CN");
-	renderedContent = post.content ? renderMarkdown(post.content) : "";
+	renderedContent = post.content ? await renderMarkdown(post.content) : "";
 	headings = post.content ? extractHeadings(post.content) : [];
 	originUrl = post.origin || post.sourceUrl || "";
 	originHostname = originUrl
@@ -546,6 +546,41 @@ if (!post) {
 					navigate(1);
 					break;
 			}
+		});
+	})();
+
+	// === Code Copy Button ===
+	(function () {
+		const blocks = document.querySelectorAll(".article-content .shiki");
+		if (blocks.length === 0) return;
+
+		blocks.forEach(function (pre) {
+			const code = pre.querySelector("code");
+			if (!code) return;
+
+			const btn = document.createElement("button");
+			btn.className = "code-copy-btn";
+			btn.textContent = "Copy";
+
+			btn.addEventListener("click", async function (e) {
+				e.stopPropagation();
+				try {
+					await navigator.clipboard.writeText(code.textContent || "");
+					btn.textContent = "Copied!";
+					btn.classList.add("copied");
+					setTimeout(function () {
+						btn.textContent = "Copy";
+						btn.classList.remove("copied");
+					}, 2000);
+				} catch {
+					btn.textContent = "Failed";
+					setTimeout(function () {
+						btn.textContent = "Copy";
+					}, 2000);
+				}
+			});
+
+			pre.appendChild(btn);
 		});
 	})();
 </script>

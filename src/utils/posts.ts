@@ -1,5 +1,6 @@
 import matter from 'gray-matter';
 import { marked } from 'marked';
+import { createHighlighter, type Highlighter } from 'shiki';
 
 export interface Post {
   slug: string;
@@ -62,8 +63,64 @@ renderer.heading = function ({ text, depth }: { text: string; depth: number }) {
 
 marked.use({ renderer });
 
-export function renderMarkdown(content: string): string {
-  return marked.parse(content, { async: false }) as string;
+let _highlighter: Highlighter | null = null;
+let _highlighterPromise: Promise<Highlighter> | null = null;
+
+async function getShikiHighlighter(): Promise<Highlighter> {
+  if (_highlighter) return _highlighter;
+  if (!_highlighterPromise) {
+    _highlighterPromise = createHighlighter({
+      themes: ['github-dark-dimmed'],
+      langs: [
+        'javascript', 'typescript', 'jsx', 'tsx',
+        'python', 'bash', 'sh', 'shell', 'zsh',
+        'json', 'yaml', 'toml',
+        'html', 'css', 'scss',
+        'md', 'markdown',
+        'sql',
+        'rust', 'go', 'java', 'c', 'cpp',
+        'ruby', 'php',
+        'diff',
+        'dockerfile', 'git-commit',
+        'plaintext', 'text',
+      ],
+    });
+  }
+  _highlighter = await _highlighterPromise;
+  return _highlighter;
+}
+
+const ENTITY_MAP: Record<string, string> = {
+  '&amp;': '&',
+  '&lt;': '<',
+  '&gt;': '>',
+  '&quot;': '"',
+  '&#39;': "'",
+  '&#x60;': '`',
+};
+const ENTITY_RE = /&(?:amp|lt|gt|quot|#39|#x60);/g;
+
+function decodeHtmlEntities(text: string): string {
+  return text.replace(ENTITY_RE, (m) => ENTITY_MAP[m] ?? m);
+}
+
+export async function renderMarkdown(content: string): Promise<string> {
+  const html = marked.parse(content, { async: false }) as string;
+
+  const hl = await getShikiHighlighter();
+
+  return html.replace(
+    /<pre><code(?: class="language-([^"]*)")?>([\s\S]*?)<\/code><\/pre>/g,
+    (_match, lang: string | undefined, code: string) => {
+      const decoded = decodeHtmlEntities(code);
+      const language = lang || 'plaintext';
+      try {
+        return hl.codeToHtml(decoded, { lang: language, theme: 'github-dark-dimmed' });
+      } catch {
+        return hl.codeToHtml(decoded, { lang: 'plaintext', theme: 'github-dark-dimmed' });
+      }
+    },
+  );
 }
 
 export interface Heading {

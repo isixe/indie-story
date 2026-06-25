@@ -23,6 +23,7 @@
 
 ### 指南
 
+- [低技术，高烹饪（六）：如何找到可靠的厨房工具](https://indiestory.itea.dev/zh/post/low-tech-high-cooking-6)
 - [2025 年开发者必备 SEO 检查清单](https://indiestory.itea.dev/zh/post/seo-checklist-for-developers)
 - [SEO中的反向链接是什么？你需要知道的一切](https://indiestory.itea.dev/zh/post/what-are-backlinks)
 - [认知负荷才是关键](https://indiestory.itea.dev/zh/post/cognitive-load-is-what-matters)

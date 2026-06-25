@@ -23,6 +23,7 @@ A curated collection of real indie developer stories and practical guides.
 
 ### Guides
 
+- [Low Tech, High Cooking (Part 6): How to Find Reliable Kitchen Tools](https://indiestory.itea.dev/en/post/low-tech-high-cooking-6)
 - [The Must-Have SEO Checklist for Developers For 2025](https://indiestory.itea.dev/en/post/seo-checklist-for-developers)
 - [What Are Backlinks in SEO? Everything You Need to Know](https://indiestory.itea.dev/en/post/what-are-backlinks)
 - [Cognitive load is what matters](https://indiestory.itea.dev/en/post/cognitive-load-is-what-matters)

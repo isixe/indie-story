@@ -1,5 +1,6 @@
 import matter from 'gray-matter';
 import { marked } from 'marked';
+import markedFootnote from 'marked-footnote';
 import { createHighlighter, type Highlighter } from 'shiki';
 
 export interface Post {
@@ -54,6 +55,11 @@ function slugify(text: string): string {
     .replace(/[\s]+/g, '-')
     .replace(/^-+|-+$/g, '');
 }
+
+marked.use(markedFootnote({
+  refMarkers: true,
+  footnoteDivider: true,
+}));
 
 const renderer = new marked.Renderer();
 renderer.heading = function ({ text, depth }: { text: string; depth: number }) {

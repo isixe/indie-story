@@ -6,7 +6,7 @@ author: '独立开花卓富贵'
 origin: 'https://www.woshipm.com/pd/6198096.html'
 category: 'story'
 tags: ['独立开发', 'AppStore', '首页推荐', '商业化', '失败复盘', '打工人小组件', '独立开花卓富贵']
-publishDate: '2026-06-23'
+publishDate: '2025-03-27'
 description: '全职独立开发两年，产品上过 AppStore 首页推荐、用户评分 4.9，但月均收入仅三千。作者复盘了"好产品不需要运营"、"好产品用户就会付费"两大认知误区，并分享了独立开发的第一性原理公式与商业教训。'
 ---
 

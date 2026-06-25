@@ -6,7 +6,7 @@ author: '独立开花卓富贵'
 origin: 'https://www.woshipm.com/pd/6198096.html'
 category: 'story'
 tags: ['indie development', 'AppStore', 'homepage feature', 'monetization', 'failure postmortem', 'Worker Widget', 'indie dev lessons']
-publishDate: '2026-06-23'
+publishDate: '2025-03-27'
 description: 'After two years of full-time indie development, the product got an AppStore homepage feature and a 4.9 rating — yet monthly revenue barely hit 3000 RMB. The author deconstructs two major cognitive biases: "good products don''t need marketing" and "users will pay for good products," sharing the first-principles formula of indie dev and hard-won business lessons.'
 ---
 

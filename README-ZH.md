@@ -16,6 +16,7 @@
 - [2024 年度总结：中年失业怎么办，月入过万，不上班也能养活自己的自由职业元年](https://indiestory.itea.dev/zh/post/axiaoxin-2024-summary)
 - [一名独立开发者的自述（我们都是有梦想的人）](https://indiestory.itea.dev/zh/post/indie-dev-self-narrative)
 - [全职独立开发半年小记](https://indiestory.itea.dev/zh/post/axiaoxin-indiehacker-6month)
+- [♫ 绝境中盛开，一位独立开发者的故事](https://indiestory.itea.dev/zh/post/leaferjs-indie-dev-story)
 - [认识独立开发这件事儿](https://indiestory.itea.dev/zh/post/understanding-indie-development)
 - [我的独立创业故事：从零到月入 4.5 万美元的两年历程](https://indiestory.itea.dev/zh/post/tony-dinh-zero-to-45kmo)
 

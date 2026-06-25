@@ -16,6 +16,7 @@ A curated collection of real indie developer stories and practical guides.
 - [2024 Year in Review: Middle-Aged and Laid Off, Making Over 10K a Month - My First Year of Freelancing Without a Job](https://indiestory.itea.dev/en/post/axiaoxin-2024-summary)
 - [A Self-Narrative of an Indie Developer (We All Have Dreams)](https://indiestory.itea.dev/en/post/indie-dev-self-narrative)
 - [Six Months as a Full-Time Indie Hacker](https://indiestory.itea.dev/en/post/axiaoxin-indiehacker-6month)
+- [♫ Bloom in Adversity — The Story of an Indie Developer](https://indiestory.itea.dev/en/post/leaferjs-indie-dev-story)
 - [Understanding Indie Development](https://indiestory.itea.dev/en/post/understanding-indie-development)
 - [My solopreneur story: zero to $45K/mo in 2 years](https://indiestory.itea.dev/en/post/tony-dinh-zero-to-45kmo)
 

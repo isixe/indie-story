@@ -26,7 +26,7 @@ Survivorship bias comes from World War II.
 
 Aircraft and pilots were precious combat assets, and the US bombers played a critical role in the war. The military took aircraft safety seriously, assembling a team of scientists to study how to improve survival rates.
 
-They surveyed all the planes in the hangar, examining where returning aircraft had been hit. Military高层 analyzed the bullet holes on every plane that made it back.
+They surveyed all the planes in the hangar, examining where returning aircraft had been hit. Military high command analyzed the bullet holes on every plane that made it back.
 
 They found that the wings were densely peppered with bullet holes, while the fuselage and tail sections had far fewer. The Allied high command's initial recommendation: **reinforce the wings.**
 
@@ -84,13 +84,13 @@ We don't form strong impressions of average-looking "other people's wives." But 
 
 Objectively, under the single variable of appearance, less attractive people face more difficulty marrying. So most married women tend to be more attractive.
 
-Thus, your memory of "other people's wives" is mostly beautiful,优秀, and elegant — another case of survivorship bias.
+Thus, your memory of "other people's wives" is mostly beautiful, outstanding, and elegant — another case of survivorship bias.
 
 ### 3. Hard Level: "Successology" (The Cult of Success)
 
 This extends to toxic feminist takes, "education is useless" arguments, anecdotal experience worship, and get-rich-quick entrepreneurship myths.
 
-Believers in "successology" (成功学/Chénggōngxué) are everywhere these days, with some even founding their own schools of thought.
+Believers in "successology" are everywhere these days, with some even founding their own schools of thought.
 
 There's the "celebrity successology" pushed by Jack Ma, Pony Ma, Steve Jobs, Bill Gates, and others. There's the "self-sacrifice successology" of people sharing their own rise stories. And there's the pyramid-scheme version peddled by Chen Anzhi and his ilk — including the infamous "prodigy" Cen Yinuo who supposedly wrote 2000 poems a day.
 
@@ -237,7 +237,3 @@ Understand survivorship bias, and amid the crowd's frenzy for charlatans, you'll
 Understand survivorship bias, and you won't just see Jack Ma's "one general's glory" — you'll also see the "ten thousand bones" of entrepreneurs who paved the way.
 
 Stay sharp.
-
----
-
-*Originally published on 人人都是产品经理 (Everyone is a Product Manager). Reproduction prohibited without permission.*

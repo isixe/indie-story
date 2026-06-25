@@ -51,13 +51,13 @@ I originally planned to organize everything I did these six months, but looking 
 
 In my first full month, I shared my income breakdown. My main sources were Google AdSense and self-media platform revenue. Little did I know month one would be the peak — income never topped that first month again. That was demoralizing, making me feel like everything I'd done in the past six months was useless. It's not just that income didn't grow — some months it actually declined continuously. I felt like I'd be forced back to a regular job soon. Anxious and helpless, because what you earn has nothing to do with what you're currently doing. What you do now only affects future income, not present income. You put in the work but see no results. Feeling powerless, small, weak, and helpless.
 
-![Income fluctuation chart](/axiaoxin-indiehacker-6month/income-chart.png)
+![Income fluctuation chart](/content/axiaoxin-indiehacker-6month/income-chart.png)
 
 Fortunately, income has started to bounce back recently — a reassuring sign. Overall, these six months have been a rollercoaster. At the lowest point, I barely managed to keep my income in five figures. That's a milestone in itself. I hope it holds. If five figures is my floor, I can face problems with a calmer mindset. Six months is too short a window — seasonal traffic fluctuations might not fully show. I need to observe through a full year. If I can sustain this, then it's truly stable.
 
 Here's a transparent look at this month's pending income — not much, but enough:
 
-![Monthly income screenshot](/axiaoxin-indiehacker-6month/monthly-income.png)
+![Monthly income screenshot](/content/axiaoxin-indiehacker-6month/monthly-income.png)
 
 I might be one of the few people hoping the Fed doesn't cut rates. At my peak, I was making nearly 280 USD a day. I can't hit that anymore, but it showed me I have that potential — and that's what keeps me going.
 

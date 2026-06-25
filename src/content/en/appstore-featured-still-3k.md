@@ -20,7 +20,7 @@ On the business side, it was a complete failure. For the past few months, averag
 
 But honestly? I see life as a process. As long as you gave it your all in each period, that's what counts. You can't negate the entire journey just because you didn't get the outcome you wanted. If you only care about results, well — everyone dies eventually. Life shrinks to a few data points, and all the joy is gone. Dadian and I agreed on this: it's a shame, it's regrettable. We couldn't close the ideal loop — build a product users love with great UX → users happily pay → word-of-mouth spreads → make an even better product.
 
-On this two-year anniversary, we've decided to stop full-time indie development. The core reason: in the "small but beautiful" app赛道, we simply couldn't sustain ourselves through individual effort alone (our abilities are有限). **I'll include my contact info at the end — if you know of any job openings, referrals are very welcome.** Below I'll share why this path didn't work for us, along with lessons learned. Hope this helps anyone considering or currently doing indie dev.
+On this two-year anniversary, we've decided to stop full-time indie development. The core reason: in the "small but beautiful" app space, we simply couldn't sustain ourselves through individual effort alone (our abilities are limited). **I'll include my contact info at the end — if you know of any job openings, referrals are very welcome.** Below I'll share why this path didn't work for us, along with lessons learned. Hope this helps anyone considering or currently doing indie dev.
 
 ## About Us: Worker Widget
 
@@ -28,7 +28,7 @@ Let me introduce us. Our core team is 3 people — me (Fugui) handling product d
 
 ![](/images/appstore-featured-still-3k/worker-widget-intro.png)
 
-iOS development is mature — every常规 app category is saturated. Being just one person, I didn't want anything too complex. So I picked the iOS widget track (a then-new feature) combined with a niche direction, differentiating through better design. Looking around the indie dev scene, most were solo programmers or PMs building functional tools. Few emphasized design differentiation. Dadian and I both wanted to make something beautiful, so we went with this angle.
+iOS development is mature — every conventional app category is saturated. Being just one person, I didn't want anything too complex. So I picked the iOS widget track (a then-new feature) combined with a niche direction, differentiating through better design. Looking around the indie dev scene, most were solo programmers or PMs building functional tools. Few emphasized design differentiation. Dadian and I both wanted to make something beautiful, so we went with this angle.
 
 Another reason for design-focused differentiation: copy protection. A solo dev can't build moats through features alone. If your product idea takes off, clones pop up overnight. But if your edge is design — as long as nobody pixel-copies you — you're fine. Design is about taste; different designs attract different audiences. No direct competition.
 
@@ -113,15 +113,15 @@ What proves a product has user value? Users paying for it.
 
 If you ask users whether they want a feature, their "yes" may not be genuine. But if you say "this feature costs money" and they still pay — that's real.
 
-Charging validates genuine market demand. If you're building for a niche高频 vertical, early charging shows you which features matter to core users. Only the needs of the 5% who actually pay truly matter.
+Charging validates genuine market demand. If you're building for a niche high-frequency vertical, early charging shows you which features matter to core users. Only the needs of the 5% who actually pay truly matter.
 
 Charging also reveals your potential business model — whether it's worth investing more time. Some products have such poor conversion that 2-3 months of dev is enough. But if you blindly build for six months before thinking about payment, you've wasted a lot of time.
 
 Calculator app example: if you build basic arithmetic + pretty skins, conversion will be terrible. Calculators have low emotional value for most people, and usage frequency is low. Without payment signals, you can't intuit which scenarios have market value.
 
-You need specific scenarios with willing高频 payers. A random calculator tool I found: it does mortgages, car loans, personal taxes. For a user, paying 10 RMB to find optimal loan timing and save tens of thousands? That's a clear value anchor for payment.
+You need specific scenarios with willing high-frequency payers. A random calculator tool I found: it does mortgages, car loans, personal taxes. For a user, paying 10 RMB to find optimal loan timing and save tens of thousands? That's a clear value anchor for payment.
 
-But for individuals it's still低频. The real paying users are real estate agents and car salespeople — they calculate loan plans daily. Instead of scribbling on paper, they generate plans from the app and send screenshots to clients. A much cleaner, more professional workflow. To them, 18 or 38 RMB is both acceptable.
+But for individuals it's still low-frequency. The real paying users are real estate agents and car salespeople — they calculate loan plans daily. Instead of scribbling on paper, they generate plans from the app and send screenshots to clients. A much cleaner, more professional workflow. To them, 18 or 38 RMB is both acceptable.
 
 ![](/images/appstore-featured-still-3k/loan-calculator.jpeg)
 
@@ -133,9 +133,9 @@ Others feel guilty charging for an imperfect product. But the payment gap is bin
 
 All the cognitive errors above played out in product execution.
 
-Marketing effort from Dadian and me? Essentially zero. We told ourselves to stick with what we're good at. When we tried writing Xiaohongshu posts, they flopped after a day's work, so we gave up (逃避).
+Marketing effort from Dadian and me? Essentially zero. We told ourselves to stick with what we're good at. When we tried writing Xiaohongshu posts, they flopped after a day's work, so we gave up (avoidance).
 
-I assumed once we hit 100K users, word-of-mouth would sustain growth. Reality: unless your product is inherently viral or occupies search keywords, organic spread is minimal — especially for a低频 category. Our daily organic新增 averaged ~40. Think about it: I like a product, but I have no motivation to shout about it to everyone. And each person's influence circle is small. For mass-market products (not niche verticals), the viral coefficient is tiny. I'd guess you need 500K+ users before organic spread becomes viable.
+I assumed once we hit 100K users, word-of-mouth would sustain growth. Reality: unless your product is inherently viral or occupies search keywords, organic spread is minimal — especially for a low-frequency category. Our daily organic new user count averaged ~40. Think about it: I like a product, but I have no motivation to shout about it to everyone. And each person's influence circle is small. For mass-market products (not niche verticals), the viral coefficient is tiny. I'd guess you need 500K+ users before organic spread becomes viable.
 
 We were also wildly optimistic about payment. Look at our App Store rating in China: 4.9 from 3000+ reviews. Our lifetime membership is 48 RMB. For a paid app, that's incredibly high.
 
@@ -147,13 +147,13 @@ The results? No fundamental difference.
 
 Initial membership purchase rate (zero gated features): ~1.5%. After gating some peripheral features: ~3.5%. After gating 60% of widget themes: ~5%.
 
-We wondered if we needed more features. We spent a month building a custom title-text widget with 20+ themes — surely there'd be something users liked. We made it会员-only. Conversion from this widget? 3.5%. When users saw the paywall, 96.5% walked away.
+We wondered if we needed more features. We spent a month building a custom title-text widget with 20+ themes — surely there'd be something users liked. We made itmembership-only. Conversion from this widget? 3.5%. When users saw the paywall, 96.5% walked away.
 
 ![](/images/appstore-featured-still-3k/conversion-rate-chart.png)
 
-The imagined 10% conversion was completely unreachable. An industry insider told me typical paid app conversion ranges from 2-7%. Our 5% was just a normal distribution result. It had nothing to do with product quality anymore — category and audience determine your conversion range. Choosing the right赛道 matters.
+The imagined 10% conversion was completely unreachable. An industry insider told me typical paid app conversion ranges from 2-7%. Our 5% was just a normal distribution result. It had nothing to do with product quality anymore — category and audience determine your conversion range. Choosing the right field matters.
 
-We also thought having a user base would make launching a second product easier. Nope. We added a splash screen promoting our new app (Yali Altitude). Click-through to AppStore was ~20%. Download conversion after that depends on the new app's page — I'll assume 10%. So 20% × 10% = 2% conversion from existing users. And since widgets are低频 — only 10% of our users open the app monthly — we had no reliable channel to reach them all. Plus, just because someone uses your app doesn't mean they care about *you* or your next product.
+We also thought having a user base would make launching a second product easier. Nope. We added a splash screen promoting our new app (Yali Altitude). Click-through to AppStore was ~20%. Download conversion after that depends on the new app's page — I'll assume 10%. So 20% × 10% = 2% conversion from existing users. And since widgets are low-frequency — only 10% of our users open the app monthly — we had no reliable channel to reach them all. Plus, just because someone uses your app doesn't mean they care about *you* or your next product.
 
 ![](/images/appstore-featured-still-3k/business-formula-1.png)
 

@@ -32,7 +32,7 @@ Can you imagine everyone else busy celebrating the New Year while I'm still laun
 
 Countless nights, invisible pressures bore down on me, leaving me anxious and unable to sleep.
 
-I dream of seeing the world beyond — the rapeseed flowers of Wuyuan, the ancient city walls of Xi'an, the Erhai Lake in Dali, the quiet and古朴 towns, the colorful forests, the majestic mountains and seas, and tasting diverse cuisines.
+I dream of seeing the world beyond — the rapeseed flowers of Wuyuan, the ancient city walls of Xi'an, the Erhai Lake in Dali, the quiet and ancient towns, the colorful forests, the majestic mountains and seas, and tasting diverse cuisines.
 
 The harsh reality is I can't go anywhere [facepalm].
 
@@ -124,7 +124,7 @@ I rewrote LeaferJS to the highest standards, added a modern UI drawing framework
 
 ## The First Light of Dawn
 
-On June 28, 2023, I officially open-sourced LeaferJS. The announcement sparked huge反响 across major platforms, earning recommendations from开源中国 (OSChina), Zhihu, the Tech Enthusiast Weekly newsletter, and others. Notably, after an influential user published a deep-dive article analyzing LeaferJS's performance, it was widely reposted by frontend-focused accounts. Thousands of users visited our website every day; the user group filled up instantly. Looking at the numbers, my excitement was beyond words. I knew this decision was right.
+On June 28, 2023, I officially open-sourced LeaferJS. The announcement sparked hugeresponse across major platforms, earning recommendations from OSChina (Open Source China), Zhihu, the Tech Enthusiast Weekly newsletter, and others. Notably, after an influential user published a deep-dive article analyzing LeaferJS's performance, it was widely reposted by frontend-focused accounts. Thousands of users visited our website every day; the user group filled up instantly. Looking at the numbers, my excitement was beyond words. I knew this decision was right.
 
 After all these years, I finally saw a faint glimmer of dawn. It was the light I had dreamed of. Though I knew there was still a long road ahead before this technology sees widespread adoption, it undoubtedly gave me the courage to keep going. This was a new beginning, and also a more formidable challenge.
 
@@ -208,9 +208,9 @@ To focus on developing the graphics engine and avoid competing with our customer
 
 ## The End of the Story
 
-Three years — both long and short. Some people spent three years building a万众瞩目的 car. Some spent three years making a blockbuster film. And I spent these three years experiencing a blazing rebirth from the depths of adversity — a feeling only I can truly understand.
+Three years — both long and short. Some people spent three years building a highly-anticipated car. Some spent three years making a blockbuster film. And I spent these three years experiencing a blazing rebirth from the depths of adversity — a feeling only I can truly understand.
 
-The story ends on a relatively positive note. Now I have LeaferJS by my side. I'm about to emerge from the困境 of life. The fields of rapeseed flowers are waving at me, as if telling me that spring has arrived. I strum the notes in my heart and passionately play "Bloom in Adversity."
+The story ends on a relatively positive note. Now I have LeaferJS by my side. I'm about to emerge from the predicament of life. The fields of rapeseed flowers are waving at me, as if telling me that spring has arrived. I strum the notes in my heart and passionately play "Bloom in Adversity."
 
 🌿 www.leaferjs.com
 

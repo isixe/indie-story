@@ -203,7 +203,7 @@ But I don't regret it. My direction is gradually becoming clearer. Finding somet
 
 As of today, I can proudly call myself an indie developer — not because I've made a lot of money from my app, but because my projects have given my life more meaning.
 
-I often see articles and posts online about indie developers. People love to give advice — telling you what to build, what领域 to enter, what kind of software to avoid, and so on.
+I often see articles and posts online about indie developers. People love to give advice — telling you what to build, what field to enter, what kind of software to avoid, and so on.
 
 But all I want to say is: if you want to become an indie developer, you must master these two words:
 

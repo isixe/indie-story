@@ -32,6 +32,7 @@
 - [互联网广告（五）：常见的广告计费模式有哪些？CPM和eCPM有什么不同？](https://indiestory.itea.dev/zh/post/internet-advertising-5)
 - [独立技术人指南](https://indiestory.itea.dev/zh/post/solo-tech-guide)
 - [产品心理学011 | 营造从众环境，让用户产生购买冲动](https://indiestory.itea.dev/zh/post/product-psychology-conformity)
+- [设计产品时，你是如何掉入从众的陷阱中的？](https://indiestory.itea.dev/zh/post/product-designer-conformity-trap)
 - [语义化版本 2.0.0](https://indiestory.itea.dev/zh/post/semantic-versioning-2-0-0)
 
 ---

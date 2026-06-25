@@ -32,4 +32,5 @@ A curated collection of real indie developer stories and practical guides.
 - [Internet Advertising (Part 5): Common Advertising Billing Models — What''s the Difference Between CPM and eCPM?](https://indiestory.itea.dev/en/post/internet-advertising-5)
 - [The Independent Tech Person Guide](https://indiestory.itea.dev/en/post/solo-tech-guide)
 - [Product Psychology 011 | Creating a Conformity Environment to Drive Purchase Impulse](https://indiestory.itea.dev/en/post/product-psychology-conformity)
+- [When Designing Products, How Do You Fall Into the Conformity Trap?](https://indiestory.itea.dev/en/post/product-designer-conformity-trap)
 - [Semantic Versioning 2.0.0](https://indiestory.itea.dev/en/post/semantic-versioning-2-0-0)

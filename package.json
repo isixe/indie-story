@@ -20,6 +20,7 @@
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.487.0",
     "marked": "^18.0.5",
+    "marked-footnote": "^1.4.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "shiki": "^4.2.0",

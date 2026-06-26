@@ -19,6 +19,7 @@
 - [全职独立开发半年小记](https://indiestory.itea.dev/zh/post/axiaoxin-indiehacker-6month)
 - [♫ 绝境中盛开，一位独立开发者的故事](https://indiestory.itea.dev/zh/post/leaferjs-indie-dev-story)
 - [认识独立开发这件事儿](https://indiestory.itea.dev/zh/post/understanding-indie-development)
+- [独立黑客第一年回顾](https://indiestory.itea.dev/zh/post/indie-hacking-year-1-review)
 - [我的独立创业故事：从零到月入 4.5 万美元的两年历程](https://indiestory.itea.dev/zh/post/tony-dinh-zero-to-45kmo)
 
 ### 指南
@@ -33,6 +34,7 @@
 - [互联网广告（五）：常见的广告计费模式有哪些？CPM和eCPM有什么不同？](https://indiestory.itea.dev/zh/post/internet-advertising-5)
 - [独立技术人指南](https://indiestory.itea.dev/zh/post/solo-tech-guide)
 - [产品心理学011 | 营造从众环境，让用户产生购买冲动](https://indiestory.itea.dev/zh/post/product-psychology-conformity)
+- [我再也无法单纯为了快乐而做事；每个爱好都变成了赚钱的尝试](https://indiestory.itea.dev/zh/post/making-money-out-of-every-hobby)
 - [设计产品时，你是如何掉入从众的陷阱中的？](https://indiestory.itea.dev/zh/post/product-designer-conformity-trap)
 - [语义化版本 2.0.0](https://indiestory.itea.dev/zh/post/semantic-versioning-2-0-0)
 

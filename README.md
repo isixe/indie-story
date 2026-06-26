@@ -19,6 +19,7 @@ A curated collection of real indie developer stories and practical guides.
 - [Six Months as a Full-Time Indie Hacker](https://indiestory.itea.dev/en/post/axiaoxin-indiehacker-6month)
 - [♫ Bloom in Adversity — The Story of an Indie Developer](https://indiestory.itea.dev/en/post/leaferjs-indie-dev-story)
 - [Understanding Indie Development](https://indiestory.itea.dev/en/post/understanding-indie-development)
+- [Indie Hacking Year 1 Review](https://indiestory.itea.dev/en/post/indie-hacking-year-1-review)
 - [My solopreneur story: zero to $45K/mo in 2 years](https://indiestory.itea.dev/en/post/tony-dinh-zero-to-45kmo)
 
 ### Guides
@@ -33,5 +34,6 @@ A curated collection of real indie developer stories and practical guides.
 - [Internet Advertising (Part 5): Common Advertising Billing Models — What''s the Difference Between CPM and eCPM?](https://indiestory.itea.dev/en/post/internet-advertising-5)
 - [The Independent Tech Person Guide](https://indiestory.itea.dev/en/post/solo-tech-guide)
 - [Product Psychology 011 | Creating a Conformity Environment to Drive Purchase Impulse](https://indiestory.itea.dev/en/post/product-psychology-conformity)
+- [I Can't Do Anything for Fun Anymore; Every Hobby Is an Attempt to Make Money](https://indiestory.itea.dev/en/post/making-money-out-of-every-hobby)
 - [When Designing Products, How Do You Fall Into the Conformity Trap?](https://indiestory.itea.dev/en/post/product-designer-conformity-trap)
 - [Semantic Versioning 2.0.0](https://indiestory.itea.dev/en/post/semantic-versioning-2-0-0)

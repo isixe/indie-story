@@ -21,9 +21,11 @@ A curated collection of real indie developer stories and practical guides.
 - [Understanding Indie Development](https://indiestory.itea.dev/en/post/understanding-indie-development)
 - [Indie Hacking Year 1 Review](https://indiestory.itea.dev/en/post/indie-hacking-year-1-review)
 - [My solopreneur story: zero to $45K/mo in 2 years](https://indiestory.itea.dev/en/post/tony-dinh-zero-to-45kmo)
+- [Why I Quit ByteDance to Develop a Browser Extension Full-Time](https://indiestory.itea.dev/en/post/cong-zi-jie-tiao-dong-luo-ci-quan-zhi-kai-fa-liu-lan-qi-kuo-zhan)
 
 ### Guides
 
+- [Just Lose Yourself First](https://indiestory.itea.dev/en/post/just-lost-myself)
 - [Low Tech, High Cooking (Part 6): How to Find Reliable Kitchen Tools](https://indiestory.itea.dev/en/post/low-tech-high-cooking-6)
 - [The Must-Have SEO Checklist for Developers For 2025](https://indiestory.itea.dev/en/post/seo-checklist-for-developers)
 - [What Are Backlinks in SEO? Everything You Need to Know](https://indiestory.itea.dev/en/post/what-are-backlinks)

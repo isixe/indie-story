@@ -21,9 +21,11 @@
 - [认识独立开发这件事儿](https://indiestory.itea.dev/zh/post/understanding-indie-development)
 - [独立黑客第一年回顾](https://indiestory.itea.dev/zh/post/indie-hacking-year-1-review)
 - [我的独立创业故事：从零到月入 4.5 万美元的两年历程](https://indiestory.itea.dev/zh/post/tony-dinh-zero-to-45kmo)
+- [我为什么从字节跳动裸辞全职开发浏览器扩展](https://indiestory.itea.dev/zh/post/cong-zi-jie-tiao-dong-luo-ci-quan-zhi-kai-fa-liu-lan-qi-kuo-zhan)
 
 ### 指南
 
+- [就把自己先搞丢](https://indiestory.itea.dev/zh/post/just-lost-myself)
 - [低技术，高烹饪（六）：如何找到可靠的厨房工具](https://indiestory.itea.dev/zh/post/low-tech-high-cooking-6)
 - [2025 年开发者必备 SEO 检查清单](https://indiestory.itea.dev/zh/post/seo-checklist-for-developers)
 - [SEO中的反向链接是什么？你需要知道的一切](https://indiestory.itea.dev/zh/post/what-are-backlinks)

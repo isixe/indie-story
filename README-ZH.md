@@ -26,6 +26,7 @@
 ### 指南
 
 - [就把自己先搞丢](https://indiestory.itea.dev/zh/post/just-lost-myself)
+- [我为什么放弃了清单 App，重新用回便利贴](https://indiestory.itea.dev/zh/post/why-i-gave-up-checklist-apps-for-sticky-notes)
 - [低技术，高烹饪（六）：如何找到可靠的厨房工具](https://indiestory.itea.dev/zh/post/low-tech-high-cooking-6)
 - [2025 年开发者必备 SEO 检查清单](https://indiestory.itea.dev/zh/post/seo-checklist-for-developers)
 - [SEO中的反向链接是什么？你需要知道的一切](https://indiestory.itea.dev/zh/post/what-are-backlinks)

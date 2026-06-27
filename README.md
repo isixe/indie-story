@@ -12,6 +12,7 @@ A curated collection of real indie developer stories and practical guides.
 
 ### Stories
 
+- [2025 Year in Review: Growth and Transformation in My Second Year of Indie Development](https://indiestory.itea.dev/en/post/indie-dev-second-year-2025-review)
 - [When I Decided to Do Both iOS and Android: An Indie Developer's True Dual-Platform Journey](https://indiestory.itea.dev/en/post/from-ios-to-android)
 - [And So I Turned Around and Became an Indie Developer](https://indiestory.itea.dev/en/post/zhuan-shen-du-li-kai-fa-zhe)
 - [Three Months into Indie Hacking Overseas, These Are the Mistakes I Made](https://indiestory.itea.dev/en/post/indie-dev-overseas-three-months-mistakes)
@@ -28,6 +29,7 @@ A curated collection of real indie developer stories and practical guides.
 ### Guides
 
 - [Just Lose Yourself First](https://indiestory.itea.dev/en/post/just-lost-myself)
+- [Low Tech, High Cooking (Part 11): Rethinking Drinking Water](https://indiestory.itea.dev/en/post/low-tech-high-cooking-11)
 - [Why I Gave Up Checklist Apps and Went Back to Sticky Notes](https://indiestory.itea.dev/en/post/why-i-gave-up-checklist-apps-for-sticky-notes)
 - [Low Tech, High Cooking (Part 6): How to Find Reliable Kitchen Tools](https://indiestory.itea.dev/en/post/low-tech-high-cooking-6)
 - [The Must-Have SEO Checklist for Developers For 2025](https://indiestory.itea.dev/en/post/seo-checklist-for-developers)

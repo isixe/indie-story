@@ -12,6 +12,7 @@
 
 ### 故事
 
+- [2025年终总结：第2年独立开发的成长与蜕变](https://indiestory.itea.dev/zh/post/indie-dev-second-year-2025-review)
 - [当我决定同时做 iOS 和 Android：独立开发者的真实双平台之路](https://indiestory.itea.dev/zh/post/from-ios-to-android)
 - [于是转身独立开发者](https://indiestory.itea.dev/zh/post/zhuan-shen-du-li-kai-fa-zhe)
 - [独立开发出海三个月，我犯了这些错](https://indiestory.itea.dev/zh/post/indie-dev-overseas-three-months-mistakes)
@@ -28,6 +29,7 @@
 ### 指南
 
 - [就把自己先搞丢](https://indiestory.itea.dev/zh/post/just-lost-myself)
+- [低技术，高烹饪（十一）：反思饮水](https://indiestory.itea.dev/zh/post/low-tech-high-cooking-11)
 - [我为什么放弃了清单 App，重新用回便利贴](https://indiestory.itea.dev/zh/post/why-i-gave-up-checklist-apps-for-sticky-notes)
 - [低技术，高烹饪（六）：如何找到可靠的厨房工具](https://indiestory.itea.dev/zh/post/low-tech-high-cooking-6)
 - [2025 年开发者必备 SEO 检查清单](https://indiestory.itea.dev/zh/post/seo-checklist-for-developers)

@@ -13,6 +13,7 @@ A curated collection of real indie developer stories and practical guides.
 ### Stories
 
 - [And So I Turned Around and Became an Indie Developer](https://indiestory.itea.dev/en/post/zhuan-shen-du-li-kai-fa-zhe)
+- [Three Months into Indie Hacking Overseas, These Are the Mistakes I Made](https://indiestory.itea.dev/en/post/indie-dev-overseas-three-months-mistakes)
 - [Featured on AppStore Homepage, Yet Still Making Less Than 3000 a Month — Two Years of Blood and Tears as an Indie Dev](https://indiestory.itea.dev/en/post/appstore-featured-still-3k)
 - [2024 Year in Review: Middle-Aged and Laid Off, Making Over 10K a Month - My First Year of Freelancing Without a Job](https://indiestory.itea.dev/en/post/axiaoxin-2024-summary)
 - [A Self-Narrative of an Indie Developer (We All Have Dreams)](https://indiestory.itea.dev/en/post/indie-dev-self-narrative)

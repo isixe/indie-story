@@ -12,6 +12,7 @@
 
 ### 故事
 
+- [当我决定同时做 iOS 和 Android：独立开发者的真实双平台之路](https://indiestory.itea.dev/zh/post/from-ios-to-android)
 - [于是转身独立开发者](https://indiestory.itea.dev/zh/post/zhuan-shen-du-li-kai-fa-zhe)
 - [独立开发出海三个月，我犯了这些错](https://indiestory.itea.dev/zh/post/indie-dev-overseas-three-months-mistakes)
 - [AppStore首页推荐后，依然月入不足3000，独立开发两年血泪复盘](https://indiestory.itea.dev/zh/post/appstore-featured-still-3k)

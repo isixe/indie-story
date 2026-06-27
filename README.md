@@ -12,6 +12,7 @@ A curated collection of real indie developer stories and practical guides.
 
 ### Stories
 
+- [When I Decided to Do Both iOS and Android: An Indie Developer's True Dual-Platform Journey](https://indiestory.itea.dev/en/post/from-ios-to-android)
 - [And So I Turned Around and Became an Indie Developer](https://indiestory.itea.dev/en/post/zhuan-shen-du-li-kai-fa-zhe)
 - [Three Months into Indie Hacking Overseas, These Are the Mistakes I Made](https://indiestory.itea.dev/en/post/indie-dev-overseas-three-months-mistakes)
 - [Featured on AppStore Homepage, Yet Still Making Less Than 3000 a Month — Two Years of Blood and Tears as an Indie Dev](https://indiestory.itea.dev/en/post/appstore-featured-still-3k)

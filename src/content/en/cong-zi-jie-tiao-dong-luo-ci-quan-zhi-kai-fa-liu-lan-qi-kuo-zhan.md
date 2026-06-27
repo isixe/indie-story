@@ -1,8 +1,8 @@
 ---
 slug: 'cong-zi-jie-tiao-dong-luo-ci-quan-zhi-kai-fa-liu-lan-qi-kuo-zhan'
 title: 'Why I Quit ByteDance to Develop a Browser Extension Full-Time'
-blogName: 'Senior Ran He'
-author: 'Ran He'
+blogName: '染河学长'
+author: '染河'
 origin: 'https://mp.weixin.qq.com/s/PNpMySfe0Fa8z7kj_yz7pQ'
 category: 'story'
 tags: ['indie development', 'ByteDance', 'browser extension', 'Circle Reader', 'freelance', 'resignation']

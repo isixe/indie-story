@@ -1,8 +1,8 @@
 ---
 slug: 'zhuan-shen-du-li-kai-fa-zhe'
 title: 'And So I Turned Around and Became an Indie Developer'
-blogName: 'Building No. 7'
-author: 'Qi Hao'
+blogName: '七号楼'
+author: '七号'
 origin: 'https://mp.weixin.qq.com/s/F7JBEFCeZgdYakgRxNb35w'
 category: 'story'
 tags: ['indie development', 'programmer', 'decade review', 'internet', 'midlife crisis', 'AI']

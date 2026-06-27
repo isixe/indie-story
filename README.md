@@ -29,6 +29,7 @@ A curated collection of real indie developer stories and practical guides.
 ### Guides
 
 - [Just Lose Yourself First](https://indiestory.itea.dev/en/post/just-lost-myself)
+- [The Iron Triangle of Digital Marketing Productivity: Insight, Content, Media](https://indiestory.itea.dev/en/post/digital-marketing-productivity-iron-triangle)
 - [Low Tech, High Cooking (Part 11): Rethinking Drinking Water](https://indiestory.itea.dev/en/post/low-tech-high-cooking-11)
 - [Why I Gave Up Checklist Apps and Went Back to Sticky Notes](https://indiestory.itea.dev/en/post/why-i-gave-up-checklist-apps-for-sticky-notes)
 - [Low Tech, High Cooking (Part 6): How to Find Reliable Kitchen Tools](https://indiestory.itea.dev/en/post/low-tech-high-cooking-6)

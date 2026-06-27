@@ -35,6 +35,7 @@
 - [不要在别人的领地上建造你的城堡](https://indiestory.itea.dev/zh/post/dont-build-your-castle)
 - [互联网广告（五）：常见的广告计费模式有哪些？CPM和eCPM有什么不同？](https://indiestory.itea.dev/zh/post/internet-advertising-5)
 - [独立技术人指南](https://indiestory.itea.dev/zh/post/solo-tech-guide)
+- [独立开发者如何更聪明地工作](https://indiestory.itea.dev/zh/post/work-smarter)
 - [产品心理学011 | 营造从众环境，让用户产生购买冲动](https://indiestory.itea.dev/zh/post/product-psychology-conformity)
 - [我再也无法单纯为了快乐而做事；每个爱好都变成了赚钱的尝试](https://indiestory.itea.dev/zh/post/making-money-out-of-every-hobby)
 - [设计产品时，你是如何掉入从众的陷阱中的？](https://indiestory.itea.dev/zh/post/product-designer-conformity-trap)

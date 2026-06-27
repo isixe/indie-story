@@ -35,6 +35,7 @@ A curated collection of real indie developer stories and practical guides.
 - [Don't build your castle in other people's kingdoms](https://indiestory.itea.dev/en/post/dont-build-your-castle)
 - [Internet Advertising (Part 5): Common Advertising Billing Models — What''s the Difference Between CPM and eCPM?](https://indiestory.itea.dev/en/post/internet-advertising-5)
 - [The Independent Tech Person Guide](https://indiestory.itea.dev/en/post/solo-tech-guide)
+- [How to work smarter as an indie hacker](https://indiestory.itea.dev/en/post/work-smarter)
 - [Product Psychology 011 | Creating a Conformity Environment to Drive Purchase Impulse](https://indiestory.itea.dev/en/post/product-psychology-conformity)
 - [I Can't Do Anything for Fun Anymore; Every Hobby Is an Attempt to Make Money](https://indiestory.itea.dev/en/post/making-money-out-of-every-hobby)
 - [When Designing Products, How Do You Fall Into the Conformity Trap?](https://indiestory.itea.dev/en/post/product-designer-conformity-trap)

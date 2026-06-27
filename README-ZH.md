@@ -44,6 +44,7 @@
 - [产品心理学011 | 营造从众环境，让用户产生购买冲动](https://indiestory.itea.dev/zh/post/product-psychology-conformity)
 - [我再也无法单纯为了快乐而做事；每个爱好都变成了赚钱的尝试](https://indiestory.itea.dev/zh/post/making-money-out-of-every-hobby)
 - [设计产品时，你是如何掉入从众的陷阱中的？](https://indiestory.itea.dev/zh/post/product-designer-conformity-trap)
+- [价值包装三步骤：讲好故事+包装好产品+好销售策略](https://indiestory.itea.dev/zh/post/value-packaging-three-steps)
 - [语义化版本 2.0.0](https://indiestory.itea.dev/zh/post/semantic-versioning-2-0-0)
 
 ---

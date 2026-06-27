@@ -12,6 +12,7 @@
 
 ### 故事
 
+- [我做了 47 个副项目，没有一个赚到钱。这是我学到的。](https://indiestory.itea.dev/zh/post/i-built-47-side-projects)
 - [2025年终总结：第2年独立开发的成长与蜕变](https://indiestory.itea.dev/zh/post/indie-dev-second-year-2025-review)
 - [当我决定同时做 iOS 和 Android：独立开发者的真实双平台之路](https://indiestory.itea.dev/zh/post/from-ios-to-android)
 - [于是转身独立开发者](https://indiestory.itea.dev/zh/post/zhuan-shen-du-li-kai-fa-zhe)

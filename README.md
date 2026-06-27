@@ -12,6 +12,7 @@ A curated collection of real indie developer stories and practical guides.
 
 ### Stories
 
+- [I Built 47 Side Projects. None Made Money. Here's What I Learned.](https://indiestory.itea.dev/en/post/i-built-47-side-projects)
 - [2025 Year in Review: Growth and Transformation in My Second Year of Indie Development](https://indiestory.itea.dev/en/post/indie-dev-second-year-2025-review)
 - [When I Decided to Do Both iOS and Android: An Indie Developer's True Dual-Platform Journey](https://indiestory.itea.dev/en/post/from-ios-to-android)
 - [And So I Turned Around and Became an Indie Developer](https://indiestory.itea.dev/en/post/zhuan-shen-du-li-kai-fa-zhe)

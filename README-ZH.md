@@ -19,6 +19,7 @@
 - [于是转身独立开发者](https://indiestory.itea.dev/zh/post/zhuan-shen-du-li-kai-fa-zhe)
 - [独立开发出海三个月，我犯了这些错](https://indiestory.itea.dev/zh/post/indie-dev-overseas-three-months-mistakes)
 - [AppStore首页推荐后，依然月入不足3000，独立开发两年血泪复盘](https://indiestory.itea.dev/zh/post/appstore-featured-still-3k)
+- [我为什么辞掉全职工作，成为一名独立开发者？](https://indiestory.itea.dev/zh/post/why-do-i-quit-a-full-time-job-become-an-indie-maker)
 - [2024 年度总结：中年失业怎么办，月入过万，不上班也能养活自己的自由职业元年](https://indiestory.itea.dev/zh/post/axiaoxin-2024-summary)
 - [一名独立开发者的自述（我们都是有梦想的人）](https://indiestory.itea.dev/zh/post/indie-dev-self-narrative)
 - [全职独立开发半年小记](https://indiestory.itea.dev/zh/post/axiaoxin-indiehacker-6month)

@@ -28,6 +28,7 @@
 - [独立黑客第一年回顾](https://indiestory.itea.dev/zh/post/indie-hacking-year-1-review)
 - [我的独立创业故事：从零到月入 4.5 万美元的两年历程](https://indiestory.itea.dev/zh/post/tony-dinh-zero-to-45kmo)
 - [我为什么从字节跳动裸辞全职开发浏览器扩展](https://indiestory.itea.dev/zh/post/cong-zi-jie-tiao-dong-luo-ci-quan-zhi-kai-fa-liu-lan-qi-kuo-zhan)
+- [全职独立开发一年后的教训：从年薪 12.5 万美元到收入 164 美元](https://indiestory.itea.dev/zh/post/lessons-learned-after-one-year-indie-making)
 
 ### 指南
 
